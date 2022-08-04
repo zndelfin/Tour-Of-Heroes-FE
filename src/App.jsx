@@ -1,18 +1,15 @@
 import React from "react";
 import "./App.css";
-//import Entry from "./Components/Entry";
-import Header from "./Components/Header";
-//import Navigator from "./Components/Navigator"
-// import Menu from "./Components/Menu"
+import Header from "./components/Header";
+//import Navigator from "./components/Navigator"
+import Menu from "./components/Menu"
+//import Card from "./components/Card";
 
 export default function App() {
   return (
     <div>
        <Header />
-       {/* <Menu /> */}
-       {/* <Navigator />
-        <Entry /> */}
-
+       <Menu />
     </div>
   
   );

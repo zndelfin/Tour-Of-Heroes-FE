@@ -1,23 +1,23 @@
 import * as React from 'react';
-import Paper from '@mui/material/Paper';
 import MenuList from '@mui/material/MenuList';
 import MenuItem from '@mui/material/MenuItem';
 import ListItemText from '@mui/material/ListItemText';
 
-export default function DenseMenu() {
+export default function Menu() {
   return (
-    <Paper sx={{ width: 320 }}>
-      <MenuList dense>
+      <MenuList dense className="menuList">
         <MenuItem>
+          MENU
+        </MenuItem>
+        <MenuItem className="menuItem">
           <ListItemText inset>Heroes</ListItemText>
         </MenuItem>
-        <MenuItem>
+        <MenuItem className="menuItem">
           <ListItemText inset>Villains</ListItemText>
         </MenuItem>
-        <MenuItem>
+        <MenuItem className="menuItem">
           <ListItemText inset>About</ListItemText>
         </MenuItem>
         </MenuList>
-    </Paper>
   );
 }
