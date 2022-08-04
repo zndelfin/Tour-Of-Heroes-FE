@@ -6,18 +6,27 @@ body{
 
 .nav{
     background-color:#292929;
-}
-
-.headerTitle{
-    list-style: none;
     display: flex;
 }
 
-.headerTitle h3{
-    font-family: Arial, Helvetica, sans-serif;
-    color:aliceblue;
+.nav img{
+    margin-left: 10px;
 }
 
-.logo{
-    margin: 10px;
+.headerTitle{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    margin-left: 30px;;
 }
+
+.whiteTitle{
+    color: white;
+}
+
+.grayTitle{
+    color:#868686;
+}
+.blueTitle{
+    color: #5BD3FB;
+}
+

@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
-import Entry from "./Components/Entry";
+//import Entry from "./Components/Entry";
 import Header from "./Components/Header";
-import Navigator from "./Components/Navigator"
+//import Navigator from "./Components/Navigator"
 // import Menu from "./Components/Menu"
 
 export default function App() {
@@ -10,8 +10,8 @@ export default function App() {
     <div>
        <Header />
        {/* <Menu /> */}
-       <Navigator />
-        <Entry />
+       {/* <Navigator />
+        <Entry /> */}
 
     </div>
   
