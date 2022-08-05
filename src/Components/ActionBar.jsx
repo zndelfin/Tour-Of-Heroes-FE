@@ -7,8 +7,7 @@ import Typography from "@mui/material/Typography";
 export default function ActionBar() {
   return (
     <div className="subHeader">
-<<<<<<< HEAD
-      <Box sx={{ display: "flex", marginLeft:"370px"}}>
+      <Box sx={{ display: "flex"}}>
         <Typography variant="h5" color="black">
           HEROES
         </Typography>
@@ -19,19 +18,6 @@ export default function ActionBar() {
             <AutorenewIcon sx={{ verticalAlign:"middle" }} />
           </Typography>
       </Box>
-=======
-    <Box sx={{ display: "flex"}}>
-      <Typography variant="h5" color="text.secondary">
-        HEROES
-      </Typography>
-      <Typography color="text.secondary">
-        <AddIcon />
-      </Typography> 
-      <Typography color="text.secondary">
-        <AutorenewIcon />
-      </Typography>
-    </Box>
->>>>>>> 0e37c73da841806ed101af9578930e7dfae32c95
     </div>
   );
 }
