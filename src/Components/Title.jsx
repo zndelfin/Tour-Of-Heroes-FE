@@ -4,7 +4,7 @@ import AutorenewIcon from "@mui/icons-material/Autorenew";
 import { Box } from "@mui/system";
 import Typography from "@mui/material/Typography";
 
-export default function ActionBar() {
+export default function Title() {
   return (
     <div className="subHeader">
       <Box sx={{ display: "flex"}}>

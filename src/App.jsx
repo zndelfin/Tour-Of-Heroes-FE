@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import ActionBar from "./components/ActionBar";
+import Title from "./components/Title";
 import Header from "./components/Header";
 //import MainContent from "./components/MainContent";
 // import Menu from "./components/Menu"
@@ -12,7 +12,7 @@ export default function App() {
   return (
     <div>
        <Header />
-       <ActionBar/>
+       <Title/>
         <MainContent/>
     </div>
       
