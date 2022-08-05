@@ -9,6 +9,7 @@ import EditIcon from '@mui/icons-material/Edit';
 
 export default function CardItems() {
   return (
+<<<<<<< HEAD
     <Box>
       <Card sx={{marginTop:"20px", marginBottom:"20px"}}>
           <CardContent sx={{backgroundColor:"#F9F9F9"}}>
@@ -86,5 +87,26 @@ export default function CardItems() {
 
     </Box>
     
+=======
+    <Container className="cardContainer">
+      <Card>
+          <CardContent sx={{backgroundColor:"#F9F9F9"}}>
+            <Typography gutterBottom variant="h5" component="div">
+              Villain Name
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              This is a sample villain description.
+            </Typography>
+          </CardContent>
+          <Box sx={{color:"black"}}>
+            <Button sx={{width:"50%", color:"black"}}>
+            <DeleteIcon sx={{fontSize:"medium"}}/>
+            Delete
+            </Button>
+            <Button sx={{width:"50%",  color:"black"}}><EditIcon sx={{fontSize:"medium"}}/>Edit</Button>
+          </Box>
+      </Card>
+    </Container>
+>>>>>>> 0e37c73da841806ed101af9578930e7dfae32c95
   );
 }

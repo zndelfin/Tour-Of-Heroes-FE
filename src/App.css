@@ -32,6 +32,7 @@ body{
 
 .menuList{
     width: 30%;
+<<<<<<< HEAD
 }  
 
 .content{
@@ -41,4 +42,23 @@ body{
 .subHeader{
     margin-top: 20px;
     position:absolute;
+=======
+}
+
+.menuItem:hover{
+    background-color: #22A5E2;
+}
+
+.card-item{
+    
+}
+
+.cardContainer{
+    width: 70%;
+    margin: 30px;
+}
+
+.content{
+    display:flex;
+>>>>>>> 0e37c73da841806ed101af9578930e7dfae32c95
 }

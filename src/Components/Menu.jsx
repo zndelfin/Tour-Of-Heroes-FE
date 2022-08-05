@@ -5,9 +5,14 @@ import ListItemText from '@mui/material/ListItemText';
 import { Box } from '@mui/system';
 
 
+
 export default function Menu() {
   return (
+<<<<<<< HEAD
     <Box>
+=======
+    <div>
+>>>>>>> 0e37c73da841806ed101af9578930e7dfae32c95
       <MenuList dense className="menuList" >
         <MenuItem>
           MENU
@@ -22,6 +27,10 @@ export default function Menu() {
           <ListItemText inset>About</ListItemText>
         </MenuItem>
         </MenuList>
+<<<<<<< HEAD
   </Box>
+=======
+        </div>
+>>>>>>> 0e37c73da841806ed101af9578930e7dfae32c95
   );
 }
