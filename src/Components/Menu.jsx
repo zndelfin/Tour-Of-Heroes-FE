@@ -5,7 +5,7 @@ import ListItemText from '@mui/material/ListItemText';
 
 export default function Menu() {
   return (
-      <MenuList dense className="menuList">
+      <MenuList dense className="menuList" >
         <MenuItem>
           MENU
         </MenuItem>
