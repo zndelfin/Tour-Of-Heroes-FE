@@ -3,8 +3,10 @@ import MenuList from '@mui/material/MenuList';
 import MenuItem from '@mui/material/MenuItem';
 import ListItemText from '@mui/material/ListItemText';
 
+
 export default function Menu() {
   return (
+    <div>
       <MenuList dense className="menuList" >
         <MenuItem>
           MENU
@@ -19,5 +21,6 @@ export default function Menu() {
           <ListItemText inset>About</ListItemText>
         </MenuItem>
         </MenuList>
+        </div>
   );
 }
