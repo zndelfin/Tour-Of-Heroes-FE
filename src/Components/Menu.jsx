@@ -2,9 +2,12 @@ import * as React from 'react';
 import MenuList from '@mui/material/MenuList';
 import MenuItem from '@mui/material/MenuItem';
 import ListItemText from '@mui/material/ListItemText';
+import { Box } from '@mui/system';
+
 
 export default function Menu() {
   return (
+    <Box>
       <MenuList dense className="menuList" >
         <MenuItem>
           MENU
@@ -19,5 +22,6 @@ export default function Menu() {
           <ListItemText inset>About</ListItemText>
         </MenuItem>
         </MenuList>
+  </Box>
   );
 }
