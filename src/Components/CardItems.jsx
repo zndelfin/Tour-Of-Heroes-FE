@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
@@ -6,11 +6,13 @@ import Typography from "@mui/material/Typography";
 import { Box } from "@mui/system";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
-import { Link } from "react-router-dom";
 
 export default function CardItems(props) {
-  const classes = props.classes;
-  
+
+  function handleClick() {
+    alert("clicked");
+  }
+
   return (
     <Box>
       <Card sx={{ marginTop: "20px", marginBottom: "20px" }}>
@@ -24,6 +26,7 @@ export default function CardItems(props) {
         </CardContent>
         <Box sx={{ color: "black" }}>
           <Button
+            onClick={handleClick}
             sx={{
               width: "50%",
               color: "black",
@@ -35,7 +38,8 @@ export default function CardItems(props) {
             Delete
           </Button>
 
-          <Button sx={{
+          <Button
+            sx={{
               width: "50%",
               color: "black",
               textTransform: "none",
