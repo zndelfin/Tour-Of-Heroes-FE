@@ -6,7 +6,8 @@ import { Box} from "@mui/system";
 export default function MainContent(){
     return(
         <Box>
-        <Menu />
+        <Menu  title="Menu"/>
+
             <Box sx={{
                 display:"flex", 
                 flexDirection:"column", 
@@ -14,9 +15,6 @@ export default function MainContent(){
                 width:"70%",
                 marginTop:"-110px"}}>
             <CardItems/>
-            {/* <CardItems/>
-            <CardItems/>
-            <CardItems/> */}
             </Box>                                                                         
     </Box>
     );
