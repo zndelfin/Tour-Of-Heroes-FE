@@ -30,9 +30,11 @@ body{
     color: #5BD3FB;
 }
 
+/* MENU */
 .menuList{
     width: 30%;
 }  
+
 
 .content{
     display:flex;
@@ -43,3 +45,5 @@ body{
     margin-left: 30%;
     position:absolute;
 }
+
+
