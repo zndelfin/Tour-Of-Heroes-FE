@@ -13,7 +13,8 @@ export default function MainContent(){
                 flexDirection:"column", 
                 float:"right", 
                 width:"70%",
-                marginTop:"-110px"}}>
+                marginTop:"-110px"
+                }}>
             <CardItems/>
             </Box>                                                                         
     </Box>

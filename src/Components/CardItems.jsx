@@ -10,7 +10,7 @@ import EditIcon from '@mui/icons-material/Edit';
 export default function CardItems() {
   return (
     <Box>
-      <Card sx={{marginTop:"20px", marginBottom:"20px"}}>
+      <Card sx={{marginTop:"20px", marginBottom:"20px", marginRight:"20px"}}>
           <CardContent sx={{backgroundColor:"#F9F9F9"}}>
             <Typography gutterBottom variant="h5" component="div">
               Aslaug
@@ -31,7 +31,7 @@ export default function CardItems() {
           </Box>
       </Card>
 
-      <Card sx={{marginTop:"20px", marginBottom:"20px"}}>
+      <Card sx={{marginTop:"20px", marginBottom:"20px", marginRight:"20px"}}>
           <CardContent sx={{backgroundColor:"#F9F9F9"}}>
             <Typography gutterBottom variant="h5" component="div">
               Ivar the Boneless
@@ -53,7 +53,7 @@ export default function CardItems() {
       </Card>
 
 
-      <Card sx={{marginTop:"20px", marginBottom:"20px"}}>
+      <Card sx={{marginTop:"20px", marginBottom:"20px", marginRight:"20px"}}>
           <CardContent sx={{backgroundColor:"#F9F9F9"}}>
             <Typography gutterBottom variant="h5" component="div">
               Lagertha the Shieldmaiden
@@ -75,7 +75,7 @@ export default function CardItems() {
       </Card>
 
 
-      <Card sx={{marginTop:"20px", marginBottom:"20px"}}>
+      <Card sx={{marginTop:"20px", marginBottom:"20px", marginRight:"20px"}}>
           <CardContent sx={{backgroundColor:"#F9F9F9"}}>
             <Typography gutterBottom variant="h5" component="div">
               Ragnar Lothbrok
