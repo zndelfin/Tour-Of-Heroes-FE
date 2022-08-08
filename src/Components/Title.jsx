@@ -10,7 +10,7 @@ export default function Title() {
   return (
     <div className="subHeader">
       <Box sx={{ display: "flex"}}>
-        <Typography variant="h5" color="black">
+        <Typography variant="h5" color="black" sx={{borderLeft:"15px solid #22a5e2", borderBottom:"5px solid #22a5e2"}}>
           HEROES
         </Typography>
           <Typography color="text.secondary" sx={{margin: "0px 10px"}}>

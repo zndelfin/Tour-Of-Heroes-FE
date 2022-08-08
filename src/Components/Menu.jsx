@@ -11,7 +11,7 @@ export default function Menu(props) {
       <Typography color="text.secondary" sx={{padding:"10px 0px 0px 20px"}}>{props.title}</Typography>
       <MenuList dense className="menuList">
         <MenuItem className="menuItem">
-          <ListItemText inset><Typography color="text.secondary">Heroes</Typography></ListItemText>
+          <ListItemText inset><Typography sx={{backgroundColor:"#22a5e2", color:"#FFFFFF"}}>Heroes</Typography></ListItemText>
         </MenuItem>
         <MenuItem className="menuItem">
           <ListItemText inset><Typography color="text.secondary">Villains</Typography></ListItemText>
