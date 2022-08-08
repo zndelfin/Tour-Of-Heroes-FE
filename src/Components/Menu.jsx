@@ -8,7 +8,7 @@ import { Typography } from '@mui/material';
 export default function Menu(props) {
   return (
     <Box>
-      <Typography>{props.title}</Typography>
+      <Typography sx={{padding:"10px 0px 0px 30px"}}>{props.title}</Typography>
       <MenuList dense className="menuList" >
         <MenuItem className="menuItem">
           <ListItemText inset>Heroes</ListItemText>
