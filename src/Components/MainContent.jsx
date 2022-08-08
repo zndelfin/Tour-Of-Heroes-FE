@@ -6,7 +6,7 @@ import { Box} from "@mui/system";
 export default function MainContent(){
     return(
         <Box>
-        <Menu  title="Menu"/>
+        <Menu  title="MENU"/>
 
             <Box sx={{
                 display:"flex", 

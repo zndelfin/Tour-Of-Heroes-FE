@@ -8,16 +8,16 @@ import { Typography } from '@mui/material';
 export default function Menu(props) {
   return (
     <Box>
-      <Typography sx={{padding:"10px 0px 0px 30px"}}>{props.title}</Typography>
-      <MenuList dense className="menuList" >
+      <Typography color="text.secondary" sx={{padding:"10px 0px 0px 20px"}}>{props.title}</Typography>
+      <MenuList dense className="menuList">
         <MenuItem className="menuItem">
-          <ListItemText inset>Heroes</ListItemText>
+          <ListItemText inset><Typography color="text.secondary">Heroes</Typography></ListItemText>
         </MenuItem>
         <MenuItem className="menuItem">
-          <ListItemText inset>Villains</ListItemText>
+          <ListItemText inset><Typography color="text.secondary">Villains</Typography></ListItemText>
         </MenuItem>
         <MenuItem className="menuItem">
-          <ListItemText inset>About</ListItemText>
+          <ListItemText inset><Typography color="text.secondary">About</Typography></ListItemText>
         </MenuItem>
         </MenuList>
     </Box>

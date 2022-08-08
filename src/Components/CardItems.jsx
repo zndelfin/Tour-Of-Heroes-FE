@@ -3,7 +3,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { Container, Box } from "@mui/system";
+import { Box } from "@mui/system";
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 
@@ -22,7 +22,7 @@ export default function CardItems() {
           <Box sx={{color:"black"}}>
             <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
             <DeleteIcon sx={{fontSize:"medium"}}/>
-            Delete
+            <Typography>Delete</Typography>
             </Button>
             <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}><EditIcon sx={{fontSize:"medium"}}/>Edit</Button>
           </Box>
