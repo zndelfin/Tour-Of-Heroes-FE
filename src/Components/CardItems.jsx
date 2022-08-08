@@ -21,10 +21,13 @@ export default function CardItems() {
           </CardContent>
           <Box sx={{color:"black"}}>
             <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
-            <DeleteIcon sx={{fontSize:"medium"}}/>
-            <Typography>Delete</Typography>
+            <DeleteIcon sx={{fontSize:"medium", color:"#757575"}}/>
+            <Typography color="text.secondary">Delete</Typography>
             </Button>
-            <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}><EditIcon sx={{fontSize:"medium"}}/>Edit</Button>
+            <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
+            <EditIcon sx={{fontSize:"medium", color:"#757575"}}/>
+            <Typography color="text.secondary">Edit</Typography>
+            </Button>
           </Box>
       </Card>
 
@@ -39,10 +42,13 @@ export default function CardItems() {
           </CardContent>
           <Box sx={{color:"black"}}>
             <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
-            <DeleteIcon sx={{fontSize:"medium"}}/>
-            Delete
+            <DeleteIcon sx={{fontSize:"medium", color:"#757575"}}/>
+            <Typography color="text.secondary">Delete</Typography>
             </Button>
-            <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}><EditIcon sx={{fontSize:"medium"}}/>Edit</Button>
+            <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
+            <EditIcon sx={{fontSize:"medium", color:"#757575"}}/>
+            <Typography color="text.secondary">Edit</Typography>
+            </Button>
           </Box>
       </Card>
 
@@ -58,10 +64,13 @@ export default function CardItems() {
           </CardContent>
           <Box sx={{color:"black"}}>
             <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
-            <DeleteIcon sx={{fontSize:"medium"}}/>
-            Delete
+            <DeleteIcon sx={{fontSize:"medium", color:"#757575"}}/>
+            <Typography color="text.secondary">Delete</Typography>
             </Button>
-            <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}><EditIcon sx={{fontSize:"medium"}}/>Edit</Button>
+            <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
+            <EditIcon sx={{fontSize:"medium", color:"#757575"}}/>
+            <Typography color="text.secondary">Edit</Typography>
+            </Button>
           </Box>
       </Card>
 
@@ -77,10 +86,13 @@ export default function CardItems() {
           </CardContent>
           <Box sx={{color:"black"}}>
             <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
-            <DeleteIcon sx={{fontSize:"medium"}}/>
-            Delete
+            <DeleteIcon sx={{fontSize:"medium", color:"#757575"}}/>
+            <Typography color="text.secondary">Delete</Typography>
             </Button>
-            <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}><EditIcon sx={{fontSize:"medium"}}/>Edit</Button>
+            <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
+            <EditIcon sx={{fontSize:"medium", color:"#757575"}}/>
+            <Typography color="text.secondary">Edit</Typography>
+            </Button>
           </Box>
       </Card>
     </Box>
