@@ -5,7 +5,10 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/system";
 import DeleteIcon from '@mui/icons-material/Delete';
-import EditIcon from '@mui/icons-material/Edit';
+// import EditIcon from '@mui/icons-material/Edit';
+ //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+ //  import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
+import EditLogo from "../assets/pen-to-square-solid.svg";
 
 export default function CardItems() {
   return (
@@ -21,12 +24,12 @@ export default function CardItems() {
           </CardContent>
           <Box sx={{color:"black"}}>
             <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
-            <DeleteIcon sx={{fontSize:"medium", color:"#757575"}}/>
+            <DeleteIcon sx={{fontSize:"medium", color:"#757575", marginRight:"5px"}}/>
             <Typography color="text.secondary">Delete</Typography>
             </Button>
             <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
-            <EditIcon sx={{fontSize:"medium", color:"#757575"}}/>
-            <Typography color="text.secondary">Edit</Typography>
+            <img className="editLogo" src={EditLogo} width="15px"/> 
+            <Typography color="text.secondary" marginLeft={"5px"}>Edit</Typography>
             </Button>
           </Box>
       </Card>
@@ -42,12 +45,12 @@ export default function CardItems() {
           </CardContent>
           <Box sx={{color:"black"}}>
             <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
-            <DeleteIcon sx={{fontSize:"medium", color:"#757575"}}/>
+            <DeleteIcon sx={{fontSize:"medium", color:"#757575", marginRight:"5px"}}/>
             <Typography color="text.secondary">Delete</Typography>
             </Button>
             <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
-            <EditIcon sx={{fontSize:"medium", color:"#757575"}}/>
-            <Typography color="text.secondary">Edit</Typography>
+            <img className="editLogo" src={EditLogo} width="15px"/> 
+            <Typography color="text.secondary" marginLeft={"5px"}>Edit</Typography>
             </Button>
           </Box>
       </Card>
@@ -64,12 +67,12 @@ export default function CardItems() {
           </CardContent>
           <Box sx={{color:"black"}}>
             <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
-            <DeleteIcon sx={{fontSize:"medium", color:"#757575"}}/>
+            <DeleteIcon sx={{fontSize:"medium", color:"#757575", marginRight:"5px"}}/>
             <Typography color="text.secondary">Delete</Typography>
             </Button>
             <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
-            <EditIcon sx={{fontSize:"medium", color:"#757575"}}/>
-            <Typography color="text.secondary">Edit</Typography>
+            <img className="editLogo" src={EditLogo} width="15px"/> 
+            <Typography color="text.secondary" marginLeft={"5px"}>Edit</Typography>
             </Button>
           </Box>
       </Card>
@@ -86,12 +89,12 @@ export default function CardItems() {
           </CardContent>
           <Box sx={{color:"black"}}>
             <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
-            <DeleteIcon sx={{fontSize:"medium", color:"#757575"}}/>
+            <DeleteIcon sx={{fontSize:"medium", color:"#757575", marginRight:"5px"}}/>
             <Typography color="text.secondary">Delete</Typography>
             </Button>
             <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
-            <EditIcon sx={{fontSize:"medium", color:"#757575"}}/>
-            <Typography color="text.secondary">Edit</Typography>
+            <img className="editLogo" src={EditLogo} width="15px"/> 
+            <Typography color="text.secondary" marginLeft={"5px"}>Edit</Typography>
             </Button>
           </Box>
       </Card>
