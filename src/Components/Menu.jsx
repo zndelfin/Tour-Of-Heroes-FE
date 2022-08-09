@@ -7,7 +7,7 @@ import { Typography } from "@mui/material";
 
 export default function Menu(props) {
   return (
-    <Box pr={5}>
+    <Box pr={5} mt={1}>
       <Typography color="text.secondary" sx={{ padding: "10px 0px 0px 20px" }}>
         {props.title}
       </Typography>

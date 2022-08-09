@@ -13,7 +13,7 @@ import EditLogo from "../assets/pen-to-square-solid.svg";
 export default function CardItems() {
   return (
     <Box>
-      <Card sx={{marginTop:"20px", marginBottom:"20px", marginRight:"20px"}}>
+      <Card sx={{marginTop:"25px", marginBottom:"20px", marginRight:"20px"}}>
           <CardContent sx={{backgroundColor:"#F9F9F9"}}>
             <Typography gutterBottom variant="h5" component="div">
               Aslaug
