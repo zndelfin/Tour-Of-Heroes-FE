@@ -10,14 +10,14 @@ export default function Menu(props) {
     <Box>
       <Typography color="text.secondary" sx={{padding:"10px 0px 0px 20px"}}>{props.title}</Typography>
       <MenuList dense className="menuList">
-        <MenuItem className="menuItem">
-          <ListItemText inset><Typography sx={{backgroundColor:"#22a5e2", color:"#FFFFFF"}}>Heroes</Typography></ListItemText>
+        <MenuItem className="menuItem" disableRipple>
+          <ListItemText inset><Typography sx={{paddingLeft:"10px", backgroundColor:"#22a5e2", color:"#FFFFFF"}}>Heroes</Typography></ListItemText>
         </MenuItem>
-        <MenuItem className="menuItem">
-          <ListItemText inset><Typography color="text.secondary">Villains</Typography></ListItemText>
+        <MenuItem className="menuItem" disableRipple>
+          <ListItemText inset><Typography color="text.secondary" sx={{paddingLeft:"10px"}}>Villains</Typography></ListItemText>
         </MenuItem>
-        <MenuItem className="menuItem">
-          <ListItemText inset><Typography color="text.secondary">About</Typography></ListItemText>
+        <MenuItem className="menuItem" disableRipple>
+          <ListItemText inset><Typography color="text.secondary" sx={{paddingLeft:"10px"}}>About</Typography></ListItemText>
         </MenuItem>
         </MenuList>
     </Box>
