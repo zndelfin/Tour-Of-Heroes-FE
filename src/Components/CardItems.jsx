@@ -17,7 +17,7 @@ export default function CardItems(props) {
     <Box>
       <Card sx={{ marginTop: "20px", marginBottom: "20px" }}>
         <CardContent sx={{ backgroundColor: "#F9F9F9" }}>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h5" component="div" >
             {props.name}
           </Typography>
           <Typography variant="body2" color="text.secondary">

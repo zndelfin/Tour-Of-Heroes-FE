@@ -23,14 +23,7 @@ const heroes = [
         id: 4,
         name: "Ragnar Lothbrok",
         description: "aka Ragnard Sigurdsson"
-    },
-
-    {
-        id: 5,
-        name: "Marc Marquez",
-        description: "MotoGP Legend"
     }
-
 ];
 
 

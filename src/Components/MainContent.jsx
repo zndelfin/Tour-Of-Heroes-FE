@@ -1,20 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import CardItems from "./CardItems";
 import Menu from "./Menu";
 import { Box } from "@mui/system";
 import heroes from "../heroes";
+import AddEntry from "./AddEntry";
 
-function createEntry(heroes){
-    return (
-        <CardItems 
-        key={heroes.id}
-        name={heroes.name}
-        description={heroes.description}
-        />
-    );
-}
+
+// function createEntry(heroes){
+//     return (
+//         <CardItems 
+//         key={heroes.id}
+//         name={heroes.name}
+//         description={heroes.description}
+//         />
+//     );
+// }
 
 export default function MainContent() {
+  const [entries, setEntries] = useState(heroes);
+
+
+  function addHero(newHero){
+    setEntries(prevValues => {
+      return [...prevValues, newHero];
+    })
+  }
+
+
   return (
     <Box>
       <Menu />
@@ -28,9 +40,22 @@ export default function MainContent() {
         }}
       >
     
-        <Box className="cardEntry" sx={{padding:"20px 20px 20px 0"}}>
+        {/* <Box className="cardEntry" sx={{padding:"20px 20px 20px 0"}}>
         {heroes.map(createEntry)}
-        </Box>
+        </Box> */}
+
+        {entries.map((heroEntry, index) => {
+          return <CardItems 
+            key={index}
+            name={heroEntry.name}
+            description= {heroEntry.description}
+          />
+        })}
+        
+        <AddEntry 
+          onAdd={addHero}
+        />
+
       </Box>
     </Box>
   );
