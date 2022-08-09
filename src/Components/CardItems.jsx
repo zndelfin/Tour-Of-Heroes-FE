@@ -13,8 +13,8 @@ import EditLogo from "../assets/pen-to-square-solid.svg";
 export default function CardItems() {
   return (
     <Box>
-      <Card sx={{marginTop:"25px", marginBottom:"20px", marginRight:"20px"}}>
-          <CardContent sx={{backgroundColor:"#F9F9F9"}}>
+      <Card sx={{marginTop:"25px", marginBottom:"20px", marginRight:"20px", borderRadius:"0px"}}>
+          <CardContent sx={{backgroundColor:"#F9F9F9", borderRadius:"0px"}}>
             <Typography gutterBottom variant="h5" component="div">
               Aslaug
             </Typography>
@@ -23,19 +23,19 @@ export default function CardItems() {
             </Typography>
           </CardContent>
           <Box sx={{color:"black"}}>
-            <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
+            <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC", borderRadius:"0px"}}>
             <DeleteIcon sx={{fontSize:"medium", color:"#757575", marginRight:"5px"}}/>
             <Typography color="text.secondary">Delete</Typography>
             </Button>
-            <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
+            <Button sx={{borderRadius:"0px", width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
             <img className="editLogo" src={EditLogo} width="15px"/> 
             <Typography color="text.secondary" marginLeft={"5px"}>Edit</Typography>
             </Button>
           </Box>
       </Card>
 
-      <Card sx={{marginTop:"20px", marginBottom:"20px", marginRight:"20px"}}>
-          <CardContent sx={{backgroundColor:"#F9F9F9"}}>
+      <Card sx={{marginTop:"20px", marginBottom:"20px", marginRight:"20px", borderRadius:"0px"}}>
+          <CardContent sx={{backgroundColor:"#F9F9F9", borderRadius:"0px"}}>
             <Typography gutterBottom variant="h5" component="div">
               Ivar the Boneless
             </Typography>
@@ -44,11 +44,11 @@ export default function CardItems() {
             </Typography>
           </CardContent>
           <Box sx={{color:"black"}}>
-            <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
+          <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC", borderRadius:"0px"}}>
             <DeleteIcon sx={{fontSize:"medium", color:"#757575", marginRight:"5px"}}/>
             <Typography color="text.secondary">Delete</Typography>
             </Button>
-            <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
+            <Button sx={{borderRadius:"0px", width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
             <img className="editLogo" src={EditLogo} width="15px"/> 
             <Typography color="text.secondary" marginLeft={"5px"}>Edit</Typography>
             </Button>
@@ -56,8 +56,8 @@ export default function CardItems() {
       </Card>
 
 
-      <Card sx={{marginTop:"20px", marginBottom:"20px", marginRight:"20px"}}>
-          <CardContent sx={{backgroundColor:"#F9F9F9"}}>
+      <Card sx={{marginTop:"20px", marginBottom:"20px", marginRight:"20px", borderRadius:"0px"}}>
+          <CardContent sx={{backgroundColor:"#F9F9F9", borderRadius:"0px"}}>
             <Typography gutterBottom variant="h5" component="div">
               Lagertha the Shieldmaiden
             </Typography>
@@ -66,11 +66,11 @@ export default function CardItems() {
             </Typography>
           </CardContent>
           <Box sx={{color:"black"}}>
-            <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
+          <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC", borderRadius:"0px"}}>
             <DeleteIcon sx={{fontSize:"medium", color:"#757575", marginRight:"5px"}}/>
             <Typography color="text.secondary">Delete</Typography>
             </Button>
-            <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
+            <Button sx={{borderRadius:"0px", width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
             <img className="editLogo" src={EditLogo} width="15px"/> 
             <Typography color="text.secondary" marginLeft={"5px"}>Edit</Typography>
             </Button>
@@ -78,8 +78,8 @@ export default function CardItems() {
       </Card>
 
 
-      <Card sx={{marginTop:"20px", marginBottom:"20px", marginRight:"20px"}}>
-          <CardContent sx={{backgroundColor:"#F9F9F9"}}>
+      <Card sx={{marginTop:"20px", marginBottom:"20px", marginRight:"20px", borderRadius:"0px"}}>
+          <CardContent sx={{backgroundColor:"#F9F9F9", borderRadius:"0px"}}>
             <Typography gutterBottom variant="h5" component="div">
               Ragnar Lothbrok
             </Typography>
@@ -88,11 +88,11 @@ export default function CardItems() {
             </Typography>
           </CardContent>
           <Box sx={{color:"black"}}>
-            <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
+          <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC", borderRadius:"0px"}}>
             <DeleteIcon sx={{fontSize:"medium", color:"#757575", marginRight:"5px"}}/>
             <Typography color="text.secondary">Delete</Typography>
             </Button>
-            <Button sx={{width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
+            <Button sx={{borderRadius:"0px", width:"50%", color:"black", textTransform:"none", border:"solid 1px #DCDCDC"}}>
             <img className="editLogo" src={EditLogo} width="15px"/> 
             <Typography color="text.secondary" marginLeft={"5px"}>Edit</Typography>
             </Button>
