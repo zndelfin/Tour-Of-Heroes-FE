@@ -4,37 +4,42 @@ import Menu from "./Menu";
 import { Box } from "@mui/system";
 import heroes from "../heroes";
 import AddEntry from "./AddEntry";
-
-
-// function createEntry(heroes){
-//     return (
-//         <CardItems 
-//         key={heroes.id}
-//         name={heroes.name}
-//         description={heroes.description}
-//         />
-//     );
-// }
+import EditEntry from "./EditEntry";
+import { BrowserRouter } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 export default function MainContent() {
   const [entries, setEntries] = useState(heroes);
+  
+  // const [selectedEntry, setValues] = useState({});
 
-  function addHero(newHero){
-    setEntries(prevValues => {
-      return [...prevValues, newHero];
-    })
-    console.log(newHero)
+  function addHero(newHero) {
+    setEntries((prevHeroes) => {
+      return [...prevHeroes, newHero];
+    });
+    //console.log(newHero);
   }
 
-  function deleteHero(id){
-    setEntries(prevValues =>{
+  function deleteHero(id) {
+    setEntries((prevValues) => {
       return prevValues.filter((heroItem, index) => {
-          return index !== id;
+        return index !== id;
       });
     });
-    // console.log("delete button clicked");
+    //console.log(id);
+    // console.log("delete button clicked from MainContent");
   }
 
+  function editHero(id) {
+    setEntries((prevValues) => {
+      console.log(id);
+      return prevValues.filter((heroItem, index) => {
+        //index === id ? <EditEntry onEdit={editHero} /> : null;
+      });
+    });
+
+    console.log("EDIT button clicked from MainContent");
+  }
 
   return (
     <Box>
@@ -48,24 +53,25 @@ export default function MainContent() {
           marginTop: "-110px",
         }}
       >
-    
-        {/* <Box className="cardEntry" sx={{padding:"20px 20px 20px 0"}}>
-        {heroes.map(createEntry)}
-        </Box> */}
 
+      {/* MAP POPULATING NEW CARDS WITH NEW HERO */}
         {entries.map((heroEntry, index) => {
-          return <CardItems 
-            key={index}
-            id={index}
-            name={heroEntry.name}
-            description= {heroEntry.description}
-            onDelete={deleteHero}
-          />
+          return (
+            <CardItems
+              key={index}
+              id={index}
+              name={heroEntry.name}
+              description={heroEntry.description}
+              onDelete={deleteHero}
+              onEdit={editHero}
+            />
+          );
         })}
-        
-        <AddEntry 
-          onAdd={addHero}
-        /> 
+
+        <AddEntry onAdd={addHero} />
+
+        <EditEntry 
+        onEdit={editHero} />
 
       </Box>
     </Box>

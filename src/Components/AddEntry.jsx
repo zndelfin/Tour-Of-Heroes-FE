@@ -4,6 +4,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import { TextField } from "@mui/material";
+import heroes from "../heroes";
 
 export default function AddEntry(props) {
   const [hero, setHero] = useState({
@@ -13,33 +14,35 @@ export default function AddEntry(props) {
   });
 
   function handleChange(event) {
-    const { name, value } = event.target;
-
+    const {name, value} = event.target;
+    console.log("Field Name: " + name + "\nValue: " + value);
+    
     setHero((prevHero) => {
       return {
         ...prevHero,
         [name]: value,
       };
     });
+
   }
 
   function submitCharacter(event) {
     props.onAdd(hero);
-    event.preventDefault();
+    //console.log(hero);
   }
 
   return (
-    <Box>
+    <Box sx={{ width: "90%" }}>
       <Card
         sx={{
           backgroundColor: "#F9F9F9",
           marginTop: "20px",
           marginBottom: "20px",
           border: "2px solid black",
-          width:"50%"
+          width: "50%",
         }}
       >
-        <CardContent sx={{display:"flex", justifyContent:"space-around"}}>
+        <CardContent sx={{ display: "flex", justifyContent: "space-around" }}>
           <TextField
             id="outlined-basic"
             label="Character Name"

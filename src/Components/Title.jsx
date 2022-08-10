@@ -4,6 +4,8 @@ import AutorenewIcon from "@mui/icons-material/Autorenew";
 import { Box } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import { IconButton } from "@mui/material";
+import { Route, Routes, Link } from "react-router-dom";
+import EditEntry from "./EditEntry";
 
 export default function Title() {
   return (
@@ -13,9 +15,11 @@ export default function Title() {
           HEROES
         </Typography>
 
-        <IconButton >
-          <AddIcon />
-        </IconButton>
+        <Link to="/AddEntry">
+          <IconButton>
+            <AddIcon />
+          </IconButton>
+        </Link>
 
         <IconButton href="/">
           <AutorenewIcon />

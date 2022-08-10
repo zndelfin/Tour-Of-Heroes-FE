@@ -6,28 +6,36 @@ import Typography from "@mui/material/Typography";
 import { Box } from "@mui/system";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
+import { Link } from "react-router-dom";
 
 export default function CardItems(props) {
 
-  function handleClick() {
+  function handleDeleteClick() {
     props.onDelete(props.id);
-    console.log(props.id);
+    console.log("Deleted ID: " + props.id);
+  }
+
+  function handleEditClick(){
+    props.onEdit();
+    console.log("EDIT BUTTON from CardItems Component")
   }
 
   return (
     <Box>
       <Card sx={{ marginTop: "20px", marginBottom: "20px" }}>
         <CardContent sx={{ backgroundColor: "#F9F9F9" }}>
-          <Typography gutterBottom variant="h5" component="div" >
+          <Typography gutterBottom variant="h5" component="div">
             {props.name}
           </Typography>
+
           <Typography variant="body2" color="text.secondary">
             {props.description}
           </Typography>
         </CardContent>
+
         <Box sx={{ color: "black" }}>
           <Button
-            onClick={handleClick}
+            onClick={handleDeleteClick}
             sx={{
               width: "50%",
               color: "black",
@@ -39,7 +47,9 @@ export default function CardItems(props) {
             Delete
           </Button>
 
+          {/* <Link to="/EditEntry/"> */}
           <Button
+            onClick={handleEditClick}
             sx={{
               width: "50%",
               color: "black",
@@ -50,6 +60,8 @@ export default function CardItems(props) {
             <EditIcon sx={{ fontSize: "medium" }} />
             Edit
           </Button>
+          {/* </Link> */}
+
         </Box>
       </Card>
     </Box>
