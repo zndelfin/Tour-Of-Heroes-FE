@@ -4,27 +4,7 @@ import { Card, CardContent, Typography} from "@mui/material";
 import Button from "@mui/material/Button";
 import { TextField } from "@mui/material";
 
-export default function EditEntry(props, id) {
-  const [hero, setHero] = useState({
-    name: "testName",
-    description: "testDescription",
-  });
-
-
-  function handleChange(event) {
-    const { name, value } = event.target;
-    
-    setHero((prevHero) => {
-      return {
-        [name]: value,
-      };
-    });
-  }
-
-  function submitCharacter() {
-    props.onEdit(hero);
-  }
-
+export default function EditEntry(props) {
   return (
     <Box sx={{width:"90%"}}>
     <Typography variant="h4" color="red">EDIT ENTRY</Typography>
@@ -44,8 +24,6 @@ export default function EditEntry(props, id) {
           variant="outlined"
           autoComplete="off"
           name="name"
-          value={hero.name}
-          onChange={handleChange}
         />
 
         <TextField
@@ -54,14 +32,11 @@ export default function EditEntry(props, id) {
           multiline
           maxRows={4}
           name="description"
-          value={hero.description}
-          onChange={handleChange}
         />
       </CardContent>
 
       <Button
         variant="outlined"
-        onClick={submitCharacter}
         sx={{ width: "100%" }}
       >
         UPDATE CHARACTER

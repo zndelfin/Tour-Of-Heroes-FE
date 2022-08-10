@@ -16,13 +16,13 @@ export default function CardItems(props) {
   }
 
   function handleEditClick(){
-    props.onEdit();
+    // props.onEdit();
     console.log("EDIT BUTTON from CardItems Component")
   }
 
   return (
     <Box>
-      <Card sx={{ marginTop: "20px", marginBottom: "20px" }}>
+      <Card sx={{ marginBottom: "20px" }}>
         <CardContent sx={{ backgroundColor: "#F9F9F9" }}>
           <Typography gutterBottom variant="h5" component="div">
             {props.name}
@@ -43,7 +43,7 @@ export default function CardItems(props) {
               border: "solid 1px #DCDCDC",
             }}
           >
-            <DeleteIcon sx={{ fontSize: "medium" }} />
+            <DeleteIcon fontSize="small" />
             Delete
           </Button>
 
@@ -57,7 +57,7 @@ export default function CardItems(props) {
               border: "solid 1px #DCDCDC",
             }}
           >
-            <EditIcon sx={{ fontSize: "medium" }} />
+            <EditIcon fontSize="small"/>
             Edit
           </Button>
           {/* </Link> */}

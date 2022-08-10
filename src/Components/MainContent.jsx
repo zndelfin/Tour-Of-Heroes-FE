@@ -5,12 +5,13 @@ import { Box } from "@mui/system";
 import heroes from "../heroes";
 import AddEntry from "./AddEntry";
 import EditEntry from "./EditEntry";
+import Title from "./Title";
 import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 
 export default function MainContent() {
   const [entries, setEntries] = useState(heroes);
-  
+
   // const [selectedEntry, setValues] = useState({});
 
   function addHero(newHero) {
@@ -42,19 +43,21 @@ export default function MainContent() {
   }
 
   return (
-    <Box>
+    <Box sx={{display:"flex", justifyContent:"space-around"}}>
       <Menu />
+
+      {/* TITLE COMPONENT */}
+      
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
           float: "right",
           width: "70%",
-          marginTop: "-110px",
         }}
       >
-
-      {/* MAP POPULATING NEW CARDS WITH NEW HERO */}
+      <Box> <Title /> </Box>
+        {/* MAP POPULATING NEW CARDS WITH NEW HERO */}
         {entries.map((heroEntry, index) => {
           return (
             <CardItems
@@ -70,9 +73,7 @@ export default function MainContent() {
 
         <AddEntry onAdd={addHero} />
 
-        <EditEntry 
-        onEdit={editHero} />
-
+        <EditEntry onEdit={editHero} />
       </Box>
     </Box>
   );

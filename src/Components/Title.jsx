@@ -9,22 +9,24 @@ import EditEntry from "./EditEntry";
 
 export default function Title() {
   return (
-    <div className="subHeader">
-      <Box sx={{ display: "flex" }}>
-        <Typography variant="h5" color="black" sx={{ padding: "5px" }}>
+    <div>
+      <Box sx={{ display: "flex", alignItems:"center"}}>
+        <Typography variant="h5" color="black" p={2}>
           HEROES
         </Typography>
 
-        <Link to="/AddEntry">
-          <IconButton>
-            <AddIcon />
-          </IconButton>
-        </Link>
+          <Link to="/AddEntry">
+            <IconButton>
+              <AddIcon fontSize="small" />
+            </IconButton>
+          </Link>
 
-        <IconButton href="/">
-          <AutorenewIcon />
-        </IconButton>
-      </Box>
+          <Link to="/">
+            <IconButton >
+              <AutorenewIcon fontSize="small"/>
+            </IconButton>
+          </Link>
+        </Box>
     </div>
   );
 }
