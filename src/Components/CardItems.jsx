@@ -10,7 +10,8 @@ import EditIcon from "@mui/icons-material/Edit";
 export default function CardItems(props) {
 
   function handleClick() {
-    alert("clicked");
+    props.onDelete(props.id);
+    console.log(props.id);
   }
 
   return (

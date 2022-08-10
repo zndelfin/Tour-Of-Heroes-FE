@@ -5,10 +5,6 @@ import { Box } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import { IconButton } from "@mui/material";
 
-function navigate() {
-  return alert("clicked");
-}
-
 export default function Title() {
   return (
     <div className="subHeader">
@@ -17,11 +13,11 @@ export default function Title() {
           HEROES
         </Typography>
 
-        <IconButton href="AddEntry">
+        <IconButton >
           <AddIcon />
         </IconButton>
 
-        <IconButton onClick={navigate}>
+        <IconButton href="/">
           <AutorenewIcon />
         </IconButton>
       </Box>

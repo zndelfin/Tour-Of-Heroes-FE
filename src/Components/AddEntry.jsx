@@ -44,6 +44,7 @@ export default function AddEntry(props) {
             id="outlined-basic"
             label="Character Name"
             variant="outlined"
+            autoComplete="off"
             name="name"
             onChange={handleChange}
             value={hero.name}

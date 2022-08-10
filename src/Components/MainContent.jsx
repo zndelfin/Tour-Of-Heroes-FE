@@ -19,11 +19,20 @@ import AddEntry from "./AddEntry";
 export default function MainContent() {
   const [entries, setEntries] = useState(heroes);
 
-
   function addHero(newHero){
     setEntries(prevValues => {
       return [...prevValues, newHero];
     })
+    console.log(newHero)
+  }
+
+  function deleteHero(id){
+    setEntries(prevValues =>{
+      return prevValues.filter((heroItem, index) => {
+          return index !== id;
+      });
+    });
+    // console.log("delete button clicked");
   }
 
 
@@ -47,14 +56,16 @@ export default function MainContent() {
         {entries.map((heroEntry, index) => {
           return <CardItems 
             key={index}
+            id={index}
             name={heroEntry.name}
             description= {heroEntry.description}
+            onDelete={deleteHero}
           />
         })}
         
         <AddEntry 
           onAdd={addHero}
-        />
+        /> 
 
       </Box>
     </Box>
