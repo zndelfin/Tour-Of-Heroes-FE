@@ -27,7 +27,7 @@ export default function AddEntry(props) {
 
   function submitCharacter(event) {
     props.onAdd(hero);
-    //console.log(hero);
+    console.log(hero);
   }
 
   return (
@@ -72,7 +72,7 @@ export default function AddEntry(props) {
           ADD CHARACTER
         </Button>
       </Card>
-      <Outlet />
+      
     </Box>
   );
 }

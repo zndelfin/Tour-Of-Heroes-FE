@@ -71,9 +71,10 @@ export default function MainContent() {
           );
         })}
 
-        {/* <AddEntry onAdd={addHero} />
+        {/* <AddEntry onAdd={addHero} /> */}
 
-        <EditEntry onEdit={editHero} /> */}
+        {/* <EditEntry onEdit={editHero} />  */}
+
       </Box>
     </Box>
   );
