@@ -6,10 +6,10 @@ import heroes from "../heroes";
 import AddEntry from "./AddEntry";
 import EditEntry from "./EditEntry";
 import Title from "./Title";
-import { BrowserRouter } from "react-router-dom";
-import { Route, Routes } from "react-router-dom";
+
 
 export default function MainContent() {
+
   const [entries, setEntries] = useState(heroes);
 
   // const [selectedEntry, setValues] = useState({});
@@ -48,7 +48,7 @@ export default function MainContent() {
 
       {/* TITLE COMPONENT */}
       
-      <Box
+    <Box
         sx={{
           display: "flex",
           flexDirection: "column",
@@ -71,9 +71,9 @@ export default function MainContent() {
           );
         })}
 
-        <AddEntry onAdd={addHero} />
+        {/* <AddEntry onAdd={addHero} />
 
-        <EditEntry onEdit={editHero} />
+        <EditEntry onEdit={editHero} /> */}
       </Box>
     </Box>
   );

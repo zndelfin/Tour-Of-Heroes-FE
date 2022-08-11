@@ -3,7 +3,8 @@ import { Box } from "@mui/system";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
-import { TextField } from "@mui/material";
+import { TextField, Typography } from "@mui/material";
+import { Outlet } from "react-router-dom";
 
 export default function AddEntry(props) {
   const [hero, setHero] = useState({
@@ -30,7 +31,8 @@ export default function AddEntry(props) {
   }
 
   return (
-    <Box sx={{ width: "90%" }}>
+    <Box m={3} sx={{display:"flex", flexDirection:"column", justifyContent:"center"}}>
+      <Typography variant="h4">Add Character</Typography>
       <Card
         sx={{
           backgroundColor: "#F9F9F9",
@@ -70,6 +72,7 @@ export default function AddEntry(props) {
           ADD CHARACTER
         </Button>
       </Card>
+      <Outlet />
     </Box>
   );
 }

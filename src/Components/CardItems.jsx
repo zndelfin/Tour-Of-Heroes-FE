@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import { Box } from "@mui/system";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 export default function CardItems(props) {
 
@@ -47,7 +47,7 @@ export default function CardItems(props) {
             Delete
           </Button>
 
-          {/* <Link to="/EditEntry/"> */}
+          <Link to="/editentry">
           <Button
             onClick={handleEditClick}
             sx={{
@@ -60,8 +60,7 @@ export default function CardItems(props) {
             <EditIcon fontSize="small"/>
             Edit
           </Button>
-          {/* </Link> */}
-
+          </Link>
         </Box>
       </Card>
     </Box>

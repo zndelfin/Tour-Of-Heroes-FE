@@ -6,14 +6,14 @@ import { TextField } from "@mui/material";
 
 export default function EditEntry(props) {
   return (
-    <Box sx={{width:"90%"}}>
-    <Typography variant="h4" color="red">EDIT ENTRY</Typography>
+    <Box m={3} sx={{display:"flex", flexDirection:"column", justifyContent:"center"}}>
+    <Typography variant="h4">Edit Character</Typography>
     <Card
       sx={{
         backgroundColor: "#F9F9F9",
         marginTop: "20px",
         marginBottom: "20px",
-        border: "2px solid red",
+        border: "2px solid black",
         width:"50%"
       }}
     >
