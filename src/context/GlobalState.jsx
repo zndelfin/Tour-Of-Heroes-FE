@@ -60,9 +60,9 @@ export const GlobalProvider = ({ children }) => {
     <GlobalContext.Provider
       value={{
         characters: state.characters,
-        removeCharacter,
         addCharacter,
-        editCharacter
+        editCharacter,
+        removeCharacter
       }}
     >
       {children}

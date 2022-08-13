@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 import { AddEntry } from "./AddEntry";
 
 export default function Title() {
-
   return (
     <div>
       <Box sx={{ display: "flex", alignItems:"center"}}>
@@ -23,7 +22,7 @@ export default function Title() {
           </Link>
 
           <Link to="/">
-            <IconButton >
+            <IconButton>
               <AutorenewIcon fontSize="small"/>
             </IconButton>
           </Link>

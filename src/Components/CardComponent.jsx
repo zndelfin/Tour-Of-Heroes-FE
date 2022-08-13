@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { GlobalContext } from "../context/GlobalState";
 import CardItems from "./CardItems";
 import { Box } from "@mui/system";
+import { Typography } from '@mui/material';
 
 export const CardComponent = () => {
   const { characters, removeCharacter } = useContext(GlobalContext);
@@ -21,7 +22,7 @@ export const CardComponent = () => {
           ))}
         </React.Fragment>
       ) : (
-        <p className="text-center bg-gray-100 text-gray-500 py-5">No data.</p>
+        <Typography variant="body1"> No data at the moment. </Typography>
       )}
     </React.Fragment>
   );

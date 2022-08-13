@@ -1,12 +1,12 @@
 import React, { useState, useContext, useEffect } from "react";
 import { GlobalContext } from "../context/GlobalState";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 import { Card, CardContent } from "@mui/material";
 import { Box } from "@mui/system";
 import Button from "@mui/material/Button";
 import { TextField, Typography } from "@mui/material";
 
-export const EditEntry = (props) => {
+export const EditEntry = () => {
   const { characters, editCharacter } = useContext(GlobalContext);
   const [selectedCharacter, setSelectedCharacter] = useState({
     id: "",
@@ -16,26 +16,28 @@ export const EditEntry = (props) => {
 
   const navigate = useNavigate();
   const currentCharId = useParams();
-  // const currentUserId = useParams();
+  // console.log(currentCharId.id)
 
-  useEffect(() => {
-    const charId = currentCharId;
-    const selectedCharacter = characters.find((character) => character.id === charId);
-    setSelectedCharacter(selectedCharacter);
-  }, [currentCharId, characters]);
-
+    useEffect(() => {
+    const charId = currentCharId.id;
+    console.log("type of the charId is : " + typeof currentCharId);
+    const selectedCharacter = characters.find(char => char.id == charId)
+   setSelectedCharacter(selectedCharacter);
+    console.log(selectedCharacter);
+    }, [currentCharId, characters] );
+  
   const onSubmit = (e) => {
     e.preventDefault();
     editCharacter(selectedCharacter);
     navigate("/");
   };
 
-const handleOnChange = (propertyName) => (event) => {
-  setSelectedCharacter((character) => ({
-    ...character,
-    [propertyName]: event.target.value
-  }));
-};
+  const handleOnChange = (charKey, newValue) =>
+    setSelectedCharacter({ ...selectedCharacter, [charKey]: newValue });
+
+  // if (!selectedCharacter || !selectedCharacter.id) {
+  //   return <div>Invalid Employee ID.</div>;
+  // }
 
   return (
     <Box
@@ -63,8 +65,9 @@ const handleOnChange = (propertyName) => (event) => {
               id="outlined-basic"
               label="Character Name"
               variant="outlined"
-              onChange={handleOnChange("name")}
-              value={name}
+              name="name"
+              onChange={(e) => handleOnChange("name", e.target.value)}
+              value={selectedCharacter.name}
               required
             ></TextField>
 
@@ -72,8 +75,9 @@ const handleOnChange = (propertyName) => (event) => {
               id="outlined-multiline-flexible"
               label="Character Description"
               type="text"
-              onChange={handleOnChange("description")}
-              value={description}
+              name="description"
+              onChange={(e) => handleOnChange("description", e.target.value)}
+              value={selectedCharacter.description}
               required
             ></TextField>
           </CardContent>

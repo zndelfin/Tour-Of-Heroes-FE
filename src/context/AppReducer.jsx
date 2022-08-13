@@ -10,15 +10,15 @@ export default function AppReducer(state, action) {
       const updateCharacter = action.payload;
 
       const updateCharacters = state.characters.map((character) => {
-        if (character.id === updatedCharacter.id) {
+        if (character.id === updateCharacter.id) {
           return updateCharacter;
         }
         return character;
       });
 
       return {
-        ...state,
-        characters: updatedCharacters,
+        // ...state,
+        characters: updateCharacters,
       };
 
     case "REMOVE_CHARACTER":
@@ -28,12 +28,6 @@ export default function AppReducer(state, action) {
           return character.id !== action.payload;
         })
       }
-      // return {
-      //   ...state,
-      //   characters: state.characters.filter(
-      //     (character) => character.id !== action.payload
-      //   ),
-      // };
 
     default:
       return state;
