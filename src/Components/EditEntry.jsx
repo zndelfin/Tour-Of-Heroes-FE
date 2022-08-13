@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { GlobalContext } from "../context/GlobalState";
-import { useNavigate, useParams, Link } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Card, CardContent } from "@mui/material";
 import { Box } from "@mui/system";
 import Button from "@mui/material/Button";
@@ -35,9 +35,9 @@ export const EditEntry = () => {
   const handleOnChange = (charKey, newValue) =>
     setSelectedCharacter({ ...selectedCharacter, [charKey]: newValue });
 
-  // if (!selectedCharacter || !selectedCharacter.id) {
-  //   return <div>Invalid Employee ID.</div>;
-  // }
+  if (!selectedCharacter || !selectedCharacter.id) {
+    return <Typography m={4} variant="body1">Invalid Character ID</Typography>
+  }
 
   return (
     <Box
