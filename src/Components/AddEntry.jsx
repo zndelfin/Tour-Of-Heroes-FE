@@ -1,78 +1,83 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { GlobalContext } from "../context/GlobalState";
+import { v4 as uuid } from "uuid";
+import { useNavigate } from "react-router-dom";
 import { Box } from "@mui/system";
+import { TextField, Typography } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
-import { TextField, Typography } from "@mui/material";
-import { Outlet } from "react-router-dom";
 
-export default function AddEntry(props) {
-  const [hero, setHero] = useState({
-    id: "",
-    name: "",
-    description: "",
-  });
+export const AddEntry = () => {
+  const navigate = useNavigate();  
+  const { addCharacter, characters } = useContext(GlobalContext);
 
-  function handleChange(event) {
-    const { name, value } = event.target;
-    console.log("Field Name: " + name + "\nValue: " + value);
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
 
-    setHero((prevHero) => {
-      return {
-        ...prevHero,
-        [name]: value,
-      };
-    });
-  }
 
-  function submitCharacter(event) {
-    props.onAdd(hero);
-    console.log(hero);
-  }
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const newCharacter = {
+      id: uuid(),
+      name,
+      description,
+    };
+
+    addCharacter(newCharacter);
+    navigate("/");
+  };
+
 
   return (
-    <Box m={3} sx={{display:"flex", flexDirection:"column", justifyContent:"center"}}>
-      <Typography variant="h4">Add Character</Typography>
+    <Box
+      m={5}
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+      }}
+    >
+      <Typography variant="h5">Add Character</Typography>
       <Card
         sx={{
           backgroundColor: "#F9F9F9",
           marginTop: "20px",
           marginBottom: "20px",
           border: "2px solid black",
-          width: "50%",
+          width: "90%",
         }}
       >
-        <CardContent sx={{ display: "flex", justifyContent: "space-around" }}>
-          <TextField
-            id="outlined-basic"
-            label="Character Name"
-            variant="outlined"
-            autoComplete="off"
-            name="name"
-            onChange={handleChange}
-            value={hero.name}
-          />
+        <form onSubmit={onSubmit}>
+          <CardContent sx={{ display: "flex", justifyContent: "space-around" }}>
+            <TextField
+              id="outlined-basic"
+              label="Character Name"
+              variant="outlined"
+              autoComplete="off"
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              name="name"
+            ></TextField>
 
-          <TextField
-            id="outlined-multiline-flexible"
-            label="Character Description"
-            multiline
-            maxRows={4}
-            name="description"
-            value={hero.description}
-            onChange={handleChange}
-          />
-        </CardContent>
+            <TextField
+              id="outlined-multiline-flexible"
+              label="Character Description"
+              type="text"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              name="description"
+            ></TextField>
 
-        <Button
-          variant="outlined"
-          onClick={submitCharacter}
-          sx={{ width: "100%" }}
-        >
-          ADD CHARACTER
-        </Button>
+          </CardContent>
+          <Button type="submit" variant="outlined" sx={{ width: "100%" }}>
+            Submit
+          </Button>
+        </form>
       </Card>
-      
     </Box>
   );
-}
+};
+
+export default AddEntry;

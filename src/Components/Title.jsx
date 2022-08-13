@@ -4,10 +4,11 @@ import AutorenewIcon from "@mui/icons-material/Autorenew";
 import { Box } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import { IconButton } from "@mui/material";
-import { Link, Outlet } from "react-router-dom";
-
+import { Link } from "react-router-dom";
+import { AddEntry } from "./AddEntry";
 
 export default function Title() {
+
   return (
     <div>
       <Box sx={{ display: "flex", alignItems:"center"}}>
@@ -15,7 +16,7 @@ export default function Title() {
           HEROES
         </Typography>
 
-          <Link to="/addentry">
+          <Link to="/add-entry">
             <IconButton>
               <AddIcon fontSize="small" />
             </IconButton>

@@ -6,20 +6,19 @@ import heroes from "../heroes";
 import AddEntry from "./AddEntry";
 import EditEntry from "./EditEntry";
 import Title from "./Title";
-import App from "../App";
-import CardComponent from "./CardComponent";
 
 
-export default function MainContent() {
+export default function AddCharacter() {
+
   const [entries, setEntries] = useState(heroes);
 
   const [selectedEntry, setValues] = useState({});
 
- function addHero(newHero) {
+  function addHero(newHero) {
     setEntries((prevHeroes) => {
       return [...prevHeroes, newHero];
     });
-    console.log(newHero);
+    //console.log(newHero);
   }
 
   function deleteHero(id) {
@@ -42,8 +41,10 @@ export default function MainContent() {
 
     console.log("EDIT button clicked from MainContent");
   }
+
   return (
     <Box sx={{ display: "flex", justifyContent: "space-around" }}>
+    
       {/* MENU COMPONENT */}
       <Menu />
 
@@ -60,12 +61,11 @@ export default function MainContent() {
           <Title />
         </Box>
 
-
-        {/* ------------CARD COMPONENT DISPLAY--------------- */}
-        <CardComponent />
+        {/* ADD CHARACTER COMPONENT */}
+        <AddEntry onAdd={addHero} />
 
         {/* MAP POPULATING NEW CARDS WITH NEW HERO */}
-        {/* {entries.map((heroEntry, index) => {
+        {entries.map((heroEntry, index) => {
           return (
             <CardItems
               key={index}
@@ -76,13 +76,12 @@ export default function MainContent() {
               onEdit={editHero}
             />
           );
-        })} */}
+        })}
 
-        {/* <AddEntry onAdd={addHero} />  */}
+        {/* <AddEntry onAdd={addHero} /> */}
 
         {/* <EditEntry onEdit={editHero} />  */}
       </Box>
     </Box>
   );
-} 
-
+}

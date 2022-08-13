@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
@@ -6,19 +6,20 @@ import Typography from "@mui/material/Typography";
 import { Box } from "@mui/system";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { GlobalContext } from "../context/GlobalState";
 
 export default function CardItems(props) {
+  //console.log(GlobalContext);
 
-  function handleDeleteClick() {
-    props.onDelete(props.id);
-    console.log("Deleted ID: " + props.id);
-  }
+  // function handleDeleteClick() {
+  //   props.onDelete(props.id);
+  //   console.log("Deleted ID: " + props.id);
+  // }
 
-  function handleEditClick(){
-    // props.onEdit();
-    console.log("EDIT BUTTON from CardItems Component")
-  }
+  // function handleEditClick(){
+  //   console.log("EDIT BUTTON from CardItems Component")
+  // }
 
   return (
     <Box>
@@ -35,7 +36,7 @@ export default function CardItems(props) {
 
         <Box sx={{ color: "black" }}>
           <Button
-            onClick={handleDeleteClick}
+            onClick={props.onClick}
             sx={{
               width: "50%",
               color: "black",
@@ -47,9 +48,9 @@ export default function CardItems(props) {
             Delete
           </Button>
 
-          <Link to="/editentry">
+
+          <Link to={`/edit-entry/${props.id}`}>
           <Button
-            onClick={handleEditClick}
             sx={{
               width: "50%",
               color: "black",
