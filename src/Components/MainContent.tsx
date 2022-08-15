@@ -27,8 +27,7 @@ export default function MainContent() {
         {/* TITLE COMPONENT */}
         <Title />
       </Box>
-
-      
+     
         {/* CARD COMPONENT DISPLAY */}
         <CardComponent />
       </RightBoxSpacing>

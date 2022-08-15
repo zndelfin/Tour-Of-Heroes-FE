@@ -42,7 +42,7 @@ export default function CardItems(props) {
           </Button>
 
 
-          <Link to={`/edit-entry/${props.id}`}>
+          <Link to={`/edit-entry/${props.id}`} style={{textDecoration:"none"}}>
           <Button style={buttonCustomStyle}>
             <EditIcon fontSize="small"/>
             Edit

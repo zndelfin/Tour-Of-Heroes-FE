@@ -21,6 +21,12 @@ const CardContentItems = styled(CardContent)`
   justify-content: space-around;
 `;
 
+const buttonCustomStyle = {
+  width: "100%",
+  textTransform: "none",
+  border: "solid 1px #DCDCDC",
+  color: "black",
+}
 
 export const AddEntry = () => {
   const navigate = useNavigate();  
@@ -78,8 +84,8 @@ export const AddEntry = () => {
               name="description"
             ></TextField>
           </CardContentItems>
-          <Button type="submit" variant="outlined" sx={{ width: "100%" }}>
-            Submit
+          <Button type="submit" variant="outlined" style={buttonCustomStyle}>
+            ADD CHARACTER
           </Button>
         </form>
       </CardStyle>

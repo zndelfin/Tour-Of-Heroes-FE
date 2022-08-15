@@ -20,6 +20,12 @@ const CardContentItems = styled(CardContent)`
   justify-content: space-around;
 `;
 
+const buttonCustomStyle = {
+  width: "100%",
+  textTransform: "none",
+  border: "solid 1px #DCDCDC",
+  color: "black",
+}
 
 
 export const EditEntry = () => {
@@ -89,7 +95,7 @@ export const EditEntry = () => {
               required
             ></TextField>
           </CardContentItems>
-          <Button type="submit" variant="outlined" sx={{ width: "100%" }}>
+          <Button type="submit" variant="outlined" style={buttonCustomStyle}>
             UPDATE CHARACTER
           </Button>
         </form>
