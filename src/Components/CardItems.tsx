@@ -6,13 +6,26 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import { Link } from "react-router-dom";
 import { Box } from "@mui/system";
+import styled from "styled-components";
+
+const buttonCustomStyle = {
+  width: "50%",
+  textTransform: "none",
+  border: "solid 1px #DCDCDC",
+  color: "black",
+};
+
+const CardContentColor = styled(CardContent) `
+  background-color: #F9F9F9;
+`;
+
 
 export default function CardItems(props) {
 
   return (
     <Box>
       <Card sx={{ marginBottom: "20px" }}>
-        <CardContent sx={{ backgroundColor: "#F9F9F9" }}>
+        <CardContentColor>
           <Typography gutterBottom variant="h5" component="div">
             {props.name}
           </Typography>
@@ -20,32 +33,17 @@ export default function CardItems(props) {
           <Typography variant="body2" color="text.secondary">
             {props.description}
           </Typography>
-        </CardContent>
+        </CardContentColor>
 
         <Box sx={{ color: "black" }}>
-          <Button
-            onClick={props.onClick}
-            sx={{
-              width: "50%",
-              color: "black",
-              textTransform: "none",
-              border: "solid 1px #DCDCDC",
-            }}
-          >
+          <Button onClick={props.onClick} style={buttonCustomStyle}>
             <DeleteIcon fontSize="small" />
             Delete
           </Button>
 
 
           <Link to={`/edit-entry/${props.id}`}>
-          <Button
-            sx={{
-              width: "50%",
-              color: "black",
-              textTransform: "none",
-              border: "solid 1px #DCDCDC",
-            }}
-          >
+          <Button style={buttonCustomStyle}>
             <EditIcon fontSize="small"/>
             Edit
           </Button>

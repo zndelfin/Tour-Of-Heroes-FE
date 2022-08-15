@@ -4,32 +4,34 @@ import Title from "./Title";
 import CardComponent from "./CardComponent";
 import styled from "styled-components";
 
-export default function MainContent() {
+const BoxSpacing = styled(Box) `
+display: flex;
+justify-content: space-around;
+`;
 
+const RightBoxSpacing = styled(Box) `
+  display: flex;
+  flex-direction: column;
+  float: right;
+  width: 70%;
+  `;
+
+export default function MainContent() {
   return (
-    <Box sx={{ display: "flex", justifyContent: "space-around" }}>
+    <BoxSpacing>
       {/* MENU COMPONENT */}
       <Menu />
+      
+      <RightBoxSpacing>
+      <Box>
+        {/* TITLE COMPONENT */}
+        <Title />
+      </Box>
 
-      {/* TITLE COMPONENT */}
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          float: "right",
-          width: "70%",
-        }}
-      >
-        <Box>
-          <Title />
-        </Box>
-
-
+      
         {/* CARD COMPONENT DISPLAY */}
         <CardComponent />
-
-      </Box>
-    </Box>
+      </RightBoxSpacing>
+    </BoxSpacing>
   );
-} 
-
+}
