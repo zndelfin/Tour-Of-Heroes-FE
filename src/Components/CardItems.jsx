@@ -5,9 +5,6 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/system";
 import DeleteIcon from '@mui/icons-material/Delete';
-// import EditIcon from '@mui/icons-material/Edit';
- //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
- //  import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 import EditLogo from "../assets/pen-to-square-solid.svg";
 
 export default function CardItems() {

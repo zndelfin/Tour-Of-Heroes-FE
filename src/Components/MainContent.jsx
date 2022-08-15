@@ -7,7 +7,6 @@ export default function MainContent(){
     return(
         <Box>
         <Menu  title="MENU"/>
-
             <Box sx={{
                 display:"flex", 
                 flexDirection:"column", 
