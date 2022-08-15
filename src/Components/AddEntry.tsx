@@ -56,6 +56,7 @@ export const AddEntry = () => {
               variant="outlined"
               autoComplete="off"
               type="text"
+              required
               value={name}
               onChange={(e) => setName(e.target.value)}
               name="name"
@@ -65,6 +66,7 @@ export const AddEntry = () => {
               id="outlined-multiline-flexible"
               label="Character Description"
               type="text"
+              required
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               name="description"
