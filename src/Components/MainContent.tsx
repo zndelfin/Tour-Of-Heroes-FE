@@ -1,12 +1,6 @@
-import { useState } from "react";
-import CardItems from "./CardItems";
 import Menu from "./Menu";
 import { Box } from "@mui/system";
-import heroes from "../heroes";
-import AddEntry from "./AddEntry";
-import EditEntry from "./EditEntry";
 import Title from "./Title";
-import App from "../App";
 import CardComponent from "./CardComponent";
 
 
@@ -31,26 +25,9 @@ export default function MainContent() {
         </Box>
 
 
-        {/* ------------CARD COMPONENT DISPLAY--------------- */}
+        {/* CARD COMPONENT DISPLAY */}
         <CardComponent />
 
-        {/* MAP POPULATING NEW CARDS WITH NEW HERO */}
-        {/* {entries.map((heroEntry, index) => {
-          return (
-            <CardItems
-              key={index}
-              id={index}
-              name={heroEntry.name}
-              description={heroEntry.description}
-              onDelete={deleteHero}
-              onEdit={editHero}
-            />
-          );
-        })} */}
-
-        {/* <AddEntry onAdd={addHero} />  */}
-
-        {/* <EditEntry onEdit={editHero} />  */}
       </Box>
     </Box>
   );

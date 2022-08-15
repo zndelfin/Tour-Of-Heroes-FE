@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { GlobalContext } from "../context/GlobalState";
 import CardItems from "./CardItems";
-import { Box } from "@mui/system";
 import { Typography } from '@mui/material';
 
 export const CardComponent = () => {
