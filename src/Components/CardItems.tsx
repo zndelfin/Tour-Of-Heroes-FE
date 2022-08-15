@@ -1,4 +1,3 @@
-import React, { useState, useContext } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
@@ -10,16 +9,6 @@ import { Link } from "react-router-dom";
 import { GlobalContext } from "../context/GlobalState";
 
 export default function CardItems(props) {
-  //console.log(GlobalContext);
-
-  // function handleDeleteClick() {
-  //   props.onDelete(props.id);
-  //   console.log("Deleted ID: " + props.id);
-  // }
-
-  // function handleEditClick(){
-  //   console.log("EDIT BUTTON from CardItems Component")
-  // }
 
   return (
     <Box>

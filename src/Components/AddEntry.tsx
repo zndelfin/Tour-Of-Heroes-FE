@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import { useState, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import { v4 as uuid } from "uuid";
 import { useNavigate } from "react-router-dom";

@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import { useState, useContext, useEffect } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import { useNavigate, useParams } from "react-router-dom";
 import { Card, CardContent } from "@mui/material";

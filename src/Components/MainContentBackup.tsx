@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import CardItems from "./CardItems";
 import Menu from "./Menu";
 import { Box } from "@mui/system";

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import CardItems from "./CardItems";
 import Menu from "./Menu";
 import { Box } from "@mui/system";
@@ -11,37 +11,7 @@ import CardComponent from "./CardComponent";
 
 
 export default function MainContent() {
-  const [entries, setEntries] = useState(heroes);
-
-  const [selectedEntry, setValues] = useState({});
-
- function addHero(newHero) {
-    setEntries((prevHeroes) => {
-      return [...prevHeroes, newHero];
-    });
-    console.log(newHero);
-  }
-
-  function deleteHero(id) {
-    setEntries((prevValues) => {
-      return prevValues.filter((heroItem, index) => {
-        return index !== id;
-      });
-    });
-    //console.log(id);
-    // console.log("delete button clicked from MainContent");
-  }
-
-  function editHero(id) {
-    setEntries((prevValues) => {
-      console.log(id);
-      return prevValues.filter((heroItem, index) => {
-        //index === id ? <EditEntry onEdit={editHero} /> : null;
-      });
-    });
-
-    console.log("EDIT button clicked from MainContent");
-  }
+  
   return (
     <Box sx={{ display: "flex", justifyContent: "space-around" }}>
       {/* MENU COMPONENT */}
