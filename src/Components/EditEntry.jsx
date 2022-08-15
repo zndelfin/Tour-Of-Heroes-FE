@@ -16,7 +16,6 @@ export const EditEntry = () => {
 
   const navigate = useNavigate();
   const currentCharId = useParams();
-  // console.log(currentCharId.id)
 
     useEffect(() => {
     const charId = currentCharId.id;
@@ -62,24 +61,22 @@ export const EditEntry = () => {
           <CardContent sx={{ display: "flex", justifyContent: "space-around" }}>
             <TextField
               type="text"
-              id="outlined-basic"
               label="Character Name"
               variant="outlined"
               name="name"
               onChange={(e) => handleOnChange("name", e.target.value)}
               value={selectedCharacter.name}
               required
-            ></TextField>
+            />
 
             <TextField
-              id="outlined-multiline-flexible"
               label="Character Description"
               type="text"
               name="description"
               onChange={(e) => handleOnChange("description", e.target.value)}
               value={selectedCharacter.description}
               required
-            ></TextField>
+            />
           </CardContent>
           <Button type="submit" variant="outlined" sx={{ width: "100%" }}>
             UPDATE CHARACTER

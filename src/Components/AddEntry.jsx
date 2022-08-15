@@ -51,7 +51,6 @@ export const AddEntry = () => {
         <form onSubmit={onSubmit}>
           <CardContent sx={{ display: "flex", justifyContent: "space-around" }}>
             <TextField
-              id="outlined-basic"
               label="Character Name"
               variant="outlined"
               autoComplete="off"
@@ -59,16 +58,15 @@ export const AddEntry = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               name="name"
-            ></TextField>
+            />
 
             <TextField
-              id="outlined-multiline-flexible"
               label="Character Description"
               type="text"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               name="description"
-            ></TextField>
+            />
 
           </CardContent>
           <Button type="submit" variant="outlined" sx={{ width: "100%" }}>

@@ -7,7 +7,7 @@ const initialState = {
     {
       id: 1,
       name: "Aslaug",
-      description: "This is a description",
+      description: "warrior queen",
     },
     {
       id: 2,
