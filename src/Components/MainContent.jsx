@@ -8,10 +8,8 @@ import CardComponent from "./CardComponent";
 export default function MainContent() {
   return (
     <Box sx={{ display: "flex", justifyContent: "space-around" }}>
-      {/* MENU COMPONENT */}
       <Menu />
 
-      {/* TITLE COMPONENT */}
       <Box
         sx={{
           display: "flex",
@@ -24,8 +22,6 @@ export default function MainContent() {
           <Title />
         </Box>
 
-
-        {/* CARD COMPONENT DISPLAY */}
         <CardComponent />
 
       </Box>
