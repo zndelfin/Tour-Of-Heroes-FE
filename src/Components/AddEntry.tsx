@@ -4,9 +4,23 @@ import { v4 as uuid } from "uuid";
 import { useNavigate } from "react-router-dom";
 import { Box } from "@mui/system";
 import { TextField, Typography } from "@mui/material";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
+import { Card, CardContent } from "@mui/material";
 import Button from "@mui/material/Button";
+import styled from "styled-components";
+
+const CardStyle = styled(Card)`
+  background-color: #F9F9F9;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid black;
+  width: 90%;
+`;
+
+const CardContentItems = styled(CardContent)`
+  display: flex;
+  justify-content: space-around;
+`;
+
 
 export const AddEntry = () => {
   const navigate = useNavigate();  
@@ -39,17 +53,9 @@ export const AddEntry = () => {
       }}
     >
       <Typography variant="h5">Add Character</Typography>
-      <Card
-        sx={{
-          backgroundColor: "#F9F9F9",
-          marginTop: "20px",
-          marginBottom: "20px",
-          border: "2px solid black",
-          width: "90%",
-        }}
-      >
+      <CardStyle>
         <form onSubmit={onSubmit}>
-          <CardContent sx={{ display: "flex", justifyContent: "space-around" }}>
+          <CardContentItems>
             <TextField
               id="outlined-basic"
               label="Character Name"
@@ -71,13 +77,12 @@ export const AddEntry = () => {
               onChange={(e) => setDescription(e.target.value)}
               name="description"
             ></TextField>
-
-          </CardContent>
+          </CardContentItems>
           <Button type="submit" variant="outlined" sx={{ width: "100%" }}>
             Submit
           </Button>
         </form>
-      </Card>
+      </CardStyle>
     </Box>
   );
 };

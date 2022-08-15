@@ -5,6 +5,22 @@ import { Card, CardContent } from "@mui/material";
 import { Box } from "@mui/system";
 import Button from "@mui/material/Button";
 import { TextField, Typography } from "@mui/material";
+import styled from "styled-components";
+
+const CardStyle = styled(Card)`
+  background-color: #F9F9F9;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid black;
+  width: 90%;
+`;
+
+const CardContentItems = styled(CardContent)`
+  display: flex;
+  justify-content: space-around;
+`;
+
+
 
 export const EditEntry = () => {
   const { characters, editCharacter } = useContext(GlobalContext);
@@ -49,17 +65,9 @@ export const EditEntry = () => {
       }}
     >
       <Typography variant="h5">Edit Character</Typography>
-      <Card
-        sx={{
-          backgroundColor: "#F9F9F9",
-          marginTop: "20px",
-          marginBottom: "20px",
-          border: "2px solid black",
-          width: "90%",
-        }}
-      >
+      <CardStyle>
         <form onSubmit={onSubmit}>
-          <CardContent sx={{ display: "flex", justifyContent: "space-around" }}>
+          <CardContentItems>
             <TextField
               type="text"
               id="outlined-basic"
@@ -80,12 +88,12 @@ export const EditEntry = () => {
               value={selectedCharacter.description}
               required
             ></TextField>
-          </CardContent>
+          </CardContentItems>
           <Button type="submit" variant="outlined" sx={{ width: "100%" }}>
             UPDATE CHARACTER
           </Button>
         </form>
-      </Card>
+      </CardStyle>
     </Box>
   );
 };
