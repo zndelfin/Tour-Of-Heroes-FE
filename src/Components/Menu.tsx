@@ -2,33 +2,60 @@ import MenuList from "@mui/material/MenuList";
 import MenuItem from "@mui/material/MenuItem";
 import ListItemText from "@mui/material/ListItemText";
 import { Box } from "@mui/system";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Typography } from "@mui/material";
+import styled from "styled-components";
 
-export default function Menu() {
+const ListItemTextStyle = styled(ListItemText)`
+  padding-left: 10px;
+  &:hover {
+    color: #ffffff;
+  }
+`;
+
+const menuItemStyling = {
+  color: "#757575",
+  borderRadius: "2px",
+  width: "17rem",
+  "&:hover": { backgroundColor: "#22a5e2", color: "#FFFFFF" }
+}
+
+const linkStyle = {
+  textDecoration: "none"
+};
+
+export default function Menu({ title }) {
   return (
     <Box>
-      <MenuList dense className="menuList">
-        <MenuItem>MENU</MenuItem>
-
-        <Link to="/heroes">
-          <MenuItem className="menuItem">
-            <ListItemText inset>Heroes</ListItemText>
-          </MenuItem>
+      <Typography color="text.secondary" pl={2}>
+        {title}
+      </Typography>
+      
+      <MenuList dense sx={{ width: "17rem" }}>
+        <Link to="heroes" style={linkStyle}>
+        <MenuItem disableRipple sx={menuItemStyling}>
+          <ListItemTextStyle inset>
+            <Typography>Heroes</Typography>
+          </ListItemTextStyle>
+        </MenuItem>
         </Link>
 
-        <Link to="/villains">
-          <MenuItem className="menuItem">
-            <ListItemText inset>Villains</ListItemText>
-          </MenuItem>
+        <Link to="villains" style={linkStyle}>
+        <MenuItem disableRipple sx={menuItemStyling}>
+          <ListItemTextStyle inset>
+            <Typography>Villains</Typography>
+          </ListItemTextStyle>
+        </MenuItem>
         </Link>
 
-        <Link to="/about">
-          <MenuItem className="menuItem">
-            <ListItemText inset>About</ListItemText>
-          </MenuItem>
+        <Link to="about" style={linkStyle}>
+        <MenuItem disableRipple sx={menuItemStyling}>
+          <ListItemTextStyle inset>
+            <Typography>About</Typography>
+          </ListItemTextStyle>
+        </MenuItem>
         </Link>
       </MenuList>
-    <Outlet/>
     </Box>
   );
 }

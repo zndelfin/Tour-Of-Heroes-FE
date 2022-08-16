@@ -29,13 +29,3 @@ export default function App() {
     </div>
   );
 }
-
-/* Advised routing standard does not work due 
-        to change in React Router V6
-        <Route path="/heroes"><Heroes /></Route>
-        <Route path="/villains"><Villains /></Route>
-        <Route path="/about"><About /></Route>
-        <Route path="/add-entry"><AddCharacter /></Route>
-        <Route path="/edit-entry"><EditCharacter /></Route>
-        <Route path="/"><MainContent /></Route>
-        <Route path="*"><NotFound /></Route> */

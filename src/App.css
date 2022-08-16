@@ -46,7 +46,6 @@ body{
     position:absolute;
 }
 
-<<<<<<< HEAD
 .tooltip {
     position: relative;
     display: inline-block;
@@ -68,15 +67,6 @@ body{
   
   .tooltip:hover .tooltiptext {
     visibility: visible;
-=======
-.editLogo{
-    color:"#757575";
-    fill:#868686;
-}
-
-.editLogo img{
-    fill:red
->>>>>>> master
   }
 
 

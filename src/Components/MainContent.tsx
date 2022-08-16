@@ -18,8 +18,8 @@ const RightBoxSpacing = styled(Box)`
 
 export default function MainContent() {
   return (
-    <BoxSpacing>
-      <Menu />
+    <BoxSpacing mt={2}>
+      <Menu title="MENU"/>
 
       <RightBoxSpacing>
         <Box>
