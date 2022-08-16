@@ -75,7 +75,6 @@ export const EditEntry = () => {
           <CardContentItems>
             <TextField
               type="text"
-              id="outlined-basic"
               label="Character Name"
               variant="outlined"
               name="name"
@@ -85,7 +84,6 @@ export const EditEntry = () => {
             ></TextField>
 
             <TextField
-              id="outlined-multiline-flexible"
               label="Character Description"
               type="text"
               name="description"

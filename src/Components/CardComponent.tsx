@@ -7,7 +7,7 @@ export const CardComponent = () => {
   const { characters, removeCharacter } = useContext(GlobalContext);
 
   return (
-    <React.Fragment>
+    <>
       {characters.length > 0 ? (
         <React.Fragment>
           {characters.map((heroes) => (
@@ -23,7 +23,7 @@ export const CardComponent = () => {
       ) : (
         <Typography variant="body1"> No data at the moment. </Typography>
       )}
-    </React.Fragment>
+    </>
   );
 };
 
