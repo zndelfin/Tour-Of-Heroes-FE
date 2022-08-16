@@ -38,7 +38,6 @@ export const EditEntry = () => {
 
   const navigate = useNavigate();
   const currentCharId = useParams();
-  // console.log(currentCharId.id)
 
     useEffect(() => {
     const charId = currentCharId.id;
