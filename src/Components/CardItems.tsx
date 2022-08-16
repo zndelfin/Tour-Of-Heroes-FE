@@ -20,29 +20,29 @@ const CardContentColor = styled(CardContent) `
 `;
 
 
-export default function CardItems(props) {
+export default function CardItems({id, name, description, onClick}) {
 
   return (
     <Box>
       <Card sx={{ marginBottom: "20px" }}>
         <CardContentColor>
           <Typography gutterBottom variant="h5" component="div">
-            {props.name}
+            {name}
           </Typography>
 
           <Typography variant="body2" color="text.secondary">
-            {props.description}
+            {description}
           </Typography>
         </CardContentColor>
 
         <Box sx={{ color: "black" }}>
-          <Button onClick={props.onClick} style={buttonCustomStyle}>
+          <Button onClick={onClick} style={buttonCustomStyle}>
             <DeleteIcon fontSize="small" />
             Delete
           </Button>
 
 
-          <Link to={`/edit-entry/${props.id}`} style={{textDecoration:"none"}}>
+          <Link to={`/edit-entry/${id}`} style={{textDecoration:"none"}}>
           <Button style={buttonCustomStyle}>
             <EditIcon fontSize="small"/>
             Edit
