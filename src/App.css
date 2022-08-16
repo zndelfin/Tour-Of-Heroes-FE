@@ -46,7 +46,6 @@ body{
     position:absolute;
 }
 
-<<<<<<< HEAD
 .tooltip {
     position: relative;
     display: inline-block;
@@ -69,7 +68,5 @@ body{
   .tooltip:hover .tooltiptext {
     visibility: visible;
   }
-=======
->>>>>>> 40c0f346280796b1bacc821b10a1e3f13a6acc95
 
 
