@@ -28,7 +28,7 @@ const buttonCustomStyle = {
   color: "black",
 }
 
-export const AddEntry = () => {
+const AddEntry = () => {
   const navigate = useNavigate();  
   const { addCharacter, characters } = useContext(GlobalContext);
 
@@ -91,4 +91,4 @@ export const AddEntry = () => {
   );
 };
 
-export default AddEntry;
+export {AddEntry};

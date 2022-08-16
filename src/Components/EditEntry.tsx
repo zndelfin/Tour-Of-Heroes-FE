@@ -28,7 +28,7 @@ const buttonCustomStyle = {
 }
 
 
-export const EditEntry = () => {
+const EditEntry = () => {
   const { characters, editCharacter } = useContext(GlobalContext);
   const [selectedCharacter, setSelectedCharacter] = useState({
     id: "",
@@ -101,4 +101,4 @@ export const EditEntry = () => {
   );
 };
 
-export default EditEntry;
+export { EditEntry };

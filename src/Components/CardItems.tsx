@@ -14,7 +14,7 @@ const buttonCustomStyle = {
   color: "black",
 };
 
-export default function CardItems({ id , name, description, onClick } : any) {
+function CardItems({ id , name, description, onClick } : any) {
   return (
     <Box>
       <Card
@@ -46,3 +46,5 @@ export default function CardItems({ id , name, description, onClick } : any) {
     </Box>
   );
 }
+
+export { CardItems };

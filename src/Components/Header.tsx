@@ -1,6 +1,6 @@
 import reactLogo from "../assets/react.svg";
 
-export default function Header() {
+function Header() {
   return (
     <div className="nav">
       <div className="tooltip"> .
@@ -15,3 +15,5 @@ export default function Header() {
     </div>
   );
 }
+
+export {Header};

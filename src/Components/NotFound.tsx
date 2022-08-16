@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 
-export default function NotFound(){
+function NotFound(){
     return (
         <Box m={5} sx={{display:"flex", justifyContent:"center"}}>
         <Typography variant="h3">PAGE NOT FOUND</Typography>
@@ -8,3 +8,4 @@ export default function NotFound(){
     );
 }
 
+export { NotFound };

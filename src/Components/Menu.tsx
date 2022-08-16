@@ -24,7 +24,7 @@ const linkStyle = {
   textDecoration: "none"
 };
 
-export default function Menu({ title }) {
+function Menu({ title }) {
   return (
     <Box>
       <Typography color="text.secondary" pl={2}>
@@ -59,3 +59,6 @@ export default function Menu({ title }) {
     </Box>
   );
 }
+
+
+export { Menu };

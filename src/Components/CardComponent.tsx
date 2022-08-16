@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 import { GlobalContext } from "../context/GlobalState";
-import CardItems from "./CardItems";
+import { CardItems } from "./CardItems";
 import { Typography } from '@mui/material';
 
-export const CardComponent = () => {
+const CardComponent = () => {
   const { characters, removeCharacter } = useContext(GlobalContext);
 
   return (
@@ -27,4 +27,4 @@ export const CardComponent = () => {
   );
 };
 
-export default CardComponent;
+export {CardComponent};

@@ -1,7 +1,7 @@
-import Menu from "./Menu";
-import { Box } from "@mui/system";
-import Title from "./Title";
+import { Menu } from "./Menu";
+import { Title } from "./Title";
 import { CardComponent } from "./CardComponent";
+import { Box } from "@mui/system";
 import styled from "styled-components";
 
 const BoxSpacing = styled(Box)`
@@ -16,7 +16,7 @@ const RightBoxSpacing = styled(Box)`
   width: 70%;
 `;
 
-export default function MainContent() {
+function MainContent() {
   return (
     <BoxSpacing mt={2}>
       <Menu title="MENU"/>
@@ -31,3 +31,5 @@ export default function MainContent() {
     </BoxSpacing>
   );
 }
+
+export { MainContent };
