@@ -3,33 +3,70 @@ import MenuList from "@mui/material/MenuList";
 import MenuItem from "@mui/material/MenuItem";
 import ListItemText from "@mui/material/ListItemText";
 import { Box } from "@mui/system";
-import { Outlet, Link } from "react-router-dom";
+import { Typography } from "@mui/material";
 
-export default function Menu() {
+export default function Menu(props) {
   return (
-    <Box>
+    <Box sx={{width:"300px"}}>
+      <Typography color="text.secondary" sx={{ padding: "10px 0px 0px 20px" }}>
+        {props.title}
+      </Typography>
+      
       <MenuList dense className="menuList">
-        <MenuItem>MENU</MenuItem>
+        <MenuItem
+          className="itemMenu"
+          disableRipple
+          sx={{
+            color: "#757575",
+            borderRadius: "2px",
+            width:"300px",
+            "&:hover": { backgroundColor: "#22a5e2", color: "#FFFFFF" },
+          }}
+        >
+          <ListItemText
+            inset
+            sx={{ paddingLeft: "10px", "&:hover": { color: "#FFFFFF" } }}
+          >
+            <Typography>Heroes</Typography>
+          </ListItemText>
+        </MenuItem>
 
-        <Link to="/heroes">
-          <MenuItem className="menuItem">
-            <ListItemText inset>Heroes</ListItemText>
-          </MenuItem>
-        </Link>
+        <MenuItem
+          className="itemMenu"
+          disableRipple
+          sx={{
+            color: "#757575",
+            borderRadius: "2px",
+            width:"300px",
+            "&:hover": { backgroundColor: "#22a5e2", color: "#FFFFFF" },
+          }}
+        >
+          <ListItemText
+            inset
+            sx={{ paddingLeft: "10px", "&:hover": { color: "#FFFFFF" } }}
+          >
+            <Typography>Villains</Typography>
+          </ListItemText>
+        </MenuItem>
 
-        <Link to="/villains">
-          <MenuItem className="menuItem">
-            <ListItemText inset>Villains</ListItemText>
-          </MenuItem>
-        </Link>
-
-        <Link to="/about">
-          <MenuItem className="menuItem">
-            <ListItemText inset>About</ListItemText>
-          </MenuItem>
-        </Link>
+        <MenuItem
+          className="itemMenu"
+          disableRipple
+          sx={{
+            color: "#757575",
+            borderRadius: "2px",
+            width:"300px",
+            "&:hover": { backgroundColor: "#22a5e2", color: "#FFFFFF" },
+          }}
+        >
+          <ListItemText
+            inset
+            sx={{ paddingLeft: "10px", "&:hover": { color: "#FFFFFF" } }}
+          >
+            <Typography>About</Typography>
+          </ListItemText>
+        </MenuItem>
       </MenuList>
-    <Outlet/>
     </Box>
   );
 }

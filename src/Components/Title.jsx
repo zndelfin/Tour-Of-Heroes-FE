@@ -5,28 +5,35 @@ import { Box } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import { IconButton } from "@mui/material";
 import { Link } from "react-router-dom";
-import { AddEntry } from "./AddEntry";
+
 
 export default function Title() {
   return (
-    <div>
-      <Box sx={{ display: "flex", alignItems:"center"}}>
-        <Typography variant="h5" color="black" p={2}>
+      <Box sx={{ display: "flex",  alignItems:"center" }}>
+        <Typography
+          variant="h5"
+          color="black"
+          sx={{
+            paddingLeft: "10px",
+            paddingRight: "10px",
+            borderLeft: "15px solid #22a5e2",
+            borderBottom: "3px solid #22a5e2",
+          }}
+        >
           HEROES
         </Typography>
 
-          <Link to="/add-entry">
-            <IconButton>
-              <AddIcon fontSize="small" />
-            </IconButton>
-          </Link>
+        <Link to="/add-entry">
+          <IconButton>
+            <AddIcon fontSize="small" />
+          </IconButton>
+        </Link>
 
-          <Link to="/">
-            <IconButton>
-              <AutorenewIcon fontSize="small"/>
-            </IconButton>
-          </Link>
-        </Box>
-    </div>
+        <Link to="/">
+          <IconButton>
+            <AutorenewIcon fontSize="small" />
+          </IconButton>
+        </Link>
+      </Box>
   );
 }

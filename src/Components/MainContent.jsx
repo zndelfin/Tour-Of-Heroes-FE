@@ -4,28 +4,29 @@ import { Box } from "@mui/system";
 import Title from "./Title";
 import CardComponent from "./CardComponent";
 
-
 export default function MainContent() {
   return (
-    <Box sx={{ display: "flex", justifyContent: "space-around" }}>
-      <Menu />
+    <Box mt={2}
+    sx={{ 
+      display: "flex", 
+      justifyContent: "space-around" 
+      }}>
 
+     
+      <Menu title="MENU" />
+   
       <Box
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          float: "right",
+          // display: "flex",
+          // flexDirection: "column",
+          // float: "right",
           width: "70%",
         }}
       >
-        <Box>
-          <Title />
-        </Box>
+        <Title />
 
         <CardComponent />
-
       </Box>
     </Box>
   );
-} 
-
+}

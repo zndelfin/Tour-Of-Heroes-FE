@@ -11,6 +11,8 @@ import NotFound from "./Components/NotFound";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { GlobalProvider } from "./context/GlobalState";
 
+
+
 export default function App() {
   return (
     <div>
