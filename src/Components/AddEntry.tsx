@@ -63,7 +63,6 @@ export const AddEntry = () => {
         <form onSubmit={onSubmit}>
           <CardContentItems>
             <TextField
-              id="outlined-basic"
               label="Character Name"
               variant="outlined"
               autoComplete="off"
@@ -72,17 +71,16 @@ export const AddEntry = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               name="name"
-            ></TextField>
+            />
 
             <TextField
-              id="outlined-multiline-flexible"
               label="Character Description"
               type="text"
               required
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               name="description"
-            ></TextField>
+            />
           </CardContentItems>
           <Button type="submit" variant="outlined" style={buttonCustomStyle}>
             ADD CHARACTER

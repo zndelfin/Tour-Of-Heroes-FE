@@ -5,7 +5,6 @@ import Typography from "@mui/material/Typography";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Link } from "react-router-dom";
 import { Box } from "@mui/system";
-import styled from "styled-components";
 import EditLogo from "../assets/pen-to-square-solid.svg";
 
 const buttonCustomStyle = {
@@ -15,7 +14,7 @@ const buttonCustomStyle = {
   color: "black",
 };
 
-export default function CardItems({ id , name, description, onClick }) {
+export default function CardItems({ id , name, description, onClick } : any) {
   return (
     <Box>
       <Card

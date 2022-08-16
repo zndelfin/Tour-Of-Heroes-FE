@@ -35,21 +35,21 @@ export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
   // ACTIONS
-  function addCharacter(character) {
+  function addCharacter(character: any) {
     dispatch({
       type: "ADD_CHARACTER",
       payload: character
     });
   }
 
-  function editCharacter(character) {
+  function editCharacter(character: any) {
     dispatch({
       type: "EDIT_CHARACTER",
       payload: character
     });
   }
 
-  function removeCharacter(id) {
+  function removeCharacter(id: Number) {
     dispatch({
       type: "REMOVE_CHARACTER",
       payload: id

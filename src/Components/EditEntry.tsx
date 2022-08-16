@@ -81,7 +81,7 @@ export const EditEntry = () => {
               onChange={(e) => handleOnChange("name", e.target.value)}
               value={selectedCharacter.name}
               required
-            ></TextField>
+            />
 
             <TextField
               label="Character Description"
@@ -90,7 +90,7 @@ export const EditEntry = () => {
               onChange={(e) => handleOnChange("description", e.target.value)}
               value={selectedCharacter.description}
               required
-            ></TextField>
+            />
           </CardContentItems>
           <Button type="submit" variant="outlined" style={buttonCustomStyle}>
             UPDATE CHARACTER

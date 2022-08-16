@@ -1,7 +1,7 @@
 import Menu from "./Menu";
 import { Box } from "@mui/system";
 import Title from "./Title";
-import CardComponent from "./CardComponent";
+import { CardComponent } from "./CardComponent";
 import styled from "styled-components";
 
 const BoxSpacing = styled(Box)`

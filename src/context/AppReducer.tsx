@@ -1,4 +1,4 @@
-export default function AppReducer(state, action) {
+export default function AppReducer(state: any, action: any) {
   switch (action.type) {
     case "ADD_CHARACTER":
       return {
@@ -9,7 +9,7 @@ export default function AppReducer(state, action) {
     case "EDIT_CHARACTER":
       const updateCharacter = action.payload;
 
-      const updateCharacters = state.characters.map((character) => {
+      const updateCharacters = state.characters.map((character: { id: Number; }) => {
         if (character.id === updateCharacter.id) {
           return updateCharacter;
         }
@@ -17,14 +17,14 @@ export default function AppReducer(state, action) {
       });
 
       return {
-        // ...state,
+         ...state,
         characters: updateCharacters,
       };
 
     case "REMOVE_CHARACTER":
       return {
         ...state,
-        characters: state.characters.filter(character => {
+        characters: state.characters.filter((character: { id: Number; }) => {
           return character.id !== action.payload;
         })
       }
