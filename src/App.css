@@ -30,6 +30,7 @@ body{
     color: #5BD3FB;
 }
 
+/* MENU */
 .menuList{
     width: 30%;
 }  
@@ -45,13 +46,5 @@ body{
     position:absolute;
 }
 
-.editLogo{
-    color:"#757575";
-    fill:#868686;
-}
-
-.editLogo img{
-    fill:red
-  }
 
 

@@ -7,29 +7,65 @@ import { Typography } from "@mui/material";
 
 export default function Menu(props) {
   return (
-    <Box pr={5} mt={1}>
+    <Box sx={{width:"300px"}}>
       <Typography color="text.secondary" sx={{ padding: "10px 0px 0px 20px" }}>
         {props.title}
       </Typography>
-      <MenuList dense className="menuList" >
-        <MenuItem className="itemMenu" disableRipple sx={{ color:"#757575", marginLeft: "20px", borderRadius:"2px", "&:hover": { backgroundColor: "#22a5e2", color:"#FFFFFF" }}}>
-          <ListItemText inset sx={{ paddingLeft: "10px", "&:hover": { color:"#FFFFFF" } }}>
+      
+      <MenuList dense className="menuList">
+        <MenuItem
+          className="itemMenu"
+          disableRipple
+          sx={{
+            color: "#757575",
+            borderRadius: "2px",
+            width:"300px",
+            "&:hover": { backgroundColor: "#22a5e2", color: "#FFFFFF" },
+          }}
+        >
+          <ListItemText
+            inset
+            sx={{ paddingLeft: "10px", "&:hover": { color: "#FFFFFF" } }}
+          >
             <Typography>Heroes</Typography>
           </ListItemText>
         </MenuItem>
 
-        <MenuItem className="itemMenu" disableRipple sx={{ color:"#757575", marginLeft: "20px", borderRadius:"2px", "&:hover": { backgroundColor: "#22a5e2", color:"#FFFFFF" }}}>
-          <ListItemText inset sx={{ paddingLeft: "10px", "&:hover": { color:"#FFFFFF" } }}>
+        <MenuItem
+          className="itemMenu"
+          disableRipple
+          sx={{
+            color: "#757575",
+            borderRadius: "2px",
+            width:"300px",
+            "&:hover": { backgroundColor: "#22a5e2", color: "#FFFFFF" },
+          }}
+        >
+          <ListItemText
+            inset
+            sx={{ paddingLeft: "10px", "&:hover": { color: "#FFFFFF" } }}
+          >
             <Typography>Villains</Typography>
           </ListItemText>
         </MenuItem>
 
-        <MenuItem className="itemMenu" disableRipple sx={{ color:"#757575", marginLeft: "20px", borderRadius:"2px", "&:hover": { backgroundColor: "#22a5e2", color:"#FFFFFF" }}}>
-          <ListItemText inset sx={{ paddingLeft: "10px", "&:hover": { color:"#FFFFFF" } }}>
+        <MenuItem
+          className="itemMenu"
+          disableRipple
+          sx={{
+            color: "#757575",
+            borderRadius: "2px",
+            width:"300px",
+            "&:hover": { backgroundColor: "#22a5e2", color: "#FFFFFF" },
+          }}
+        >
+          <ListItemText
+            inset
+            sx={{ paddingLeft: "10px", "&:hover": { color: "#FFFFFF" } }}
+          >
             <Typography>About</Typography>
           </ListItemText>
         </MenuItem>
-
       </MenuList>
     </Box>
   );
