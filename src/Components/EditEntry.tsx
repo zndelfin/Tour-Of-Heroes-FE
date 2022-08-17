@@ -22,7 +22,6 @@ const StyledCardContent = styled(CardContent)`
 
 const buttonCustomStyle = {
   width: "100%",
-  textTransform: "none",
   border: "solid 1px #DCDCDC",
   color: "black",
 }
@@ -93,7 +92,7 @@ const EditEntry = () => {
             />
           </StyledCardContent>
           <Button type="submit" variant="outlined" style={buttonCustomStyle}>
-            UPDATE CHARACTER
+            Update Character
           </Button>
         </form>
       </StyledCard>
