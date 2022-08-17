@@ -4,12 +4,12 @@ import { CardComponent } from "./CardComponent";
 import { Box } from "@mui/system";
 import styled from "styled-components";
 
-const BoxSpacing = styled(Box)`
+const StyledBoxSpacing = styled(Box)`
   display: flex;
   justify-content: space-around;
 `;
 
-const RightBoxSpacing = styled(Box)`
+const StyledRightBoxSpacing = styled(Box)`
   display: flex;
   flex-direction: column;
   float: right;
@@ -18,17 +18,17 @@ const RightBoxSpacing = styled(Box)`
 
 function MainContent() {
   return (
-    <BoxSpacing mt={2}>
+    <StyledBoxSpacing mt={2}>
       <Menu title="MENU"/>
 
-      <RightBoxSpacing>
+      <StyledRightBoxSpacing>
         <Box>
           <Title />
         </Box>
 
         <CardComponent />
-      </RightBoxSpacing>
-    </BoxSpacing>
+      </StyledRightBoxSpacing>
+    </StyledBoxSpacing>
   );
 }
 

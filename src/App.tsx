@@ -17,14 +17,14 @@ export default function App() {
       <GlobalProvider>
         <BrowserRouter>
           <Routes>
-            <Route path="/heroes" element={<Heroes />} />
-            <Route path="/villains" element={<Villains />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/heroes" element={ <Heroes />} />
+            <Route path="/villains" element={<Villains />}/> 
+            <Route path="/about" element={<About />} /> 
             <Route path="/add-entry" element={<AddEntry />} />
-            <Route path="/edit-entry/:id" element={<EditEntry />} />
-            <Route path="/"element={ <MainContent /> }/>
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+            <Route path="/edit-entry/:id" element={<EditEntry />} /> 
+            <Route path="/"element={ <MainContent /> } /> 
+            <Route path="*" element={<NotFound />} /> 
+            </Routes>
         </BrowserRouter>
       </GlobalProvider>
     </div>

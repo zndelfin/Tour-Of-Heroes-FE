@@ -8,7 +8,7 @@ import { Card, CardContent } from "@mui/material";
 import Button from "@mui/material/Button";
 import styled from "styled-components";
 
-const CardStyle = styled(Card)`
+const StyledCard = styled(Card)`
   background-color: #F9F9F9;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -16,7 +16,7 @@ const CardStyle = styled(Card)`
   width: 90%;
 `;
 
-const CardContentItems = styled(CardContent)`
+const StyledCardContent = styled(CardContent)`
   display: flex;
   justify-content: space-around;
 `;
@@ -59,9 +59,9 @@ const AddEntry = () => {
       }}
     >
       <Typography variant="h5">Add Character</Typography>
-      <CardStyle>
+      <StyledCard>
         <form onSubmit={onSubmit}>
-          <CardContentItems>
+          <StyledCardContent>
             <TextField
               label="Character Name"
               variant="outlined"
@@ -81,12 +81,12 @@ const AddEntry = () => {
               onChange={(e) => setDescription(e.target.value)}
               name="description"
             />
-          </CardContentItems>
+          </StyledCardContent>
           <Button type="submit" variant="outlined" style={buttonCustomStyle}>
             ADD CHARACTER
           </Button>
         </form>
-      </CardStyle>
+      </StyledCard>
     </Box>
   );
 };

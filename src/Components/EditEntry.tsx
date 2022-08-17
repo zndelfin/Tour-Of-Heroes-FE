@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 import { TextField, Typography } from "@mui/material";
 import styled from "styled-components";
 
-const CardStyle = styled(Card)`
+const StyledCard = styled(Card)`
   background-color: #F9F9F9;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -15,7 +15,7 @@ const CardStyle = styled(Card)`
   width: 90%;
 `;
 
-const CardContentItems = styled(CardContent)`
+const StyledCardContent = styled(CardContent)`
   display: flex;
   justify-content: space-around;
 `;
@@ -70,9 +70,9 @@ const EditEntry = () => {
       }}
     >
       <Typography variant="h5">Edit Character</Typography>
-      <CardStyle>
+      <StyledCard>
         <form onSubmit={onSubmit}>
-          <CardContentItems>
+          <StyledCardContent>
             <TextField
               type="text"
               label="Character Name"
@@ -91,12 +91,12 @@ const EditEntry = () => {
               value={selectedCharacter.description}
               required
             />
-          </CardContentItems>
+          </StyledCardContent>
           <Button type="submit" variant="outlined" style={buttonCustomStyle}>
             UPDATE CHARACTER
           </Button>
         </form>
-      </CardStyle>
+      </StyledCard>
     </Box>
   );
 };

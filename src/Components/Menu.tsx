@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { Typography } from "@mui/material";
 import styled from "styled-components";
 
-const ListItemTextStyle = styled(ListItemText)`
+const StyledListItemText = styled(ListItemText)`
   padding-left: 10px;
   &:hover {
     color: #ffffff;
@@ -34,25 +34,25 @@ function Menu({ title }) {
       <MenuList dense sx={{ width: "17rem" }}>
         <Link to="heroes" style={linkStyle}>
         <MenuItem disableRipple sx={menuItemStyling}>
-          <ListItemTextStyle inset>
+          <StyledListItemText inset>
             <Typography>Heroes</Typography>
-          </ListItemTextStyle>
+          </StyledListItemText>
         </MenuItem>
         </Link>
 
         <Link to="villains" style={linkStyle}>
         <MenuItem disableRipple sx={menuItemStyling}>
-          <ListItemTextStyle inset>
+          <StyledListItemText inset>
             <Typography>Villains</Typography>
-          </ListItemTextStyle>
+          </StyledListItemText>
         </MenuItem>
         </Link>
 
         <Link to="about" style={linkStyle}>
         <MenuItem disableRipple sx={menuItemStyling}>
-          <ListItemTextStyle inset>
+          <StyledListItemText inset>
             <Typography>About</Typography>
-          </ListItemTextStyle>
+          </StyledListItemText>
         </MenuItem>
         </Link>
       </MenuList>
