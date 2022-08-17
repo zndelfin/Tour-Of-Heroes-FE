@@ -16,7 +16,6 @@ const StyledListItemText = styled(ListItemText)`
 const menuItemStyling = {
   color: "#757575",
   borderRadius: "2px",
-  width: "17rem",
   "&:hover": { backgroundColor: "#22a5e2", color: "#FFFFFF" }
 }
 
@@ -26,12 +25,12 @@ const linkStyle = {
 
 function Menu({ title }) {
   return (
-    <Box>
+    <Box width="25%">
       <Typography color="text.secondary" pl={2}>
         {title}
       </Typography>
       
-      <MenuList dense sx={{ width: "17rem" }}>
+      <MenuList dense>
         <Link to="heroes" style={linkStyle}>
         <MenuItem disableRipple sx={menuItemStyling}>
           <StyledListItemText inset>

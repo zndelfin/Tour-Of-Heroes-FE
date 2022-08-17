@@ -12,7 +12,6 @@ const StyledBoxSpacing = styled(Box)`
 const StyledRightBoxSpacing = styled(Box)`
   display: flex;
   flex-direction: column;
-  float: right;
   width: 70%;
 `;
 
