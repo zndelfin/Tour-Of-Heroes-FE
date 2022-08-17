@@ -17,4 +17,4 @@ function Header() {
   );
 }
 
-export {Header, version};
+export { Header };
