@@ -1,5 +1,5 @@
 import reactLogo from "../assets/react.svg";
-import { version } from "/package.json";
+import {version} from "../../version";
 
 function Header() {
   return (
@@ -13,7 +13,6 @@ function Header() {
         <h3 className="grayTitle">OF</h3>
         <h3 className="blueTitle">HEROES</h3>
       </div>
-    {console.log(version)}
     </div>
   );
 }

@@ -23,7 +23,7 @@ const linkStyle = {
   textDecoration: "none"
 };
 
-function Menu({ title }) {
+function Menu({ title } : any) {
   return (
     <Box width="25%">
       <Typography color="text.secondary" pl={2}>
