@@ -1,13 +1,13 @@
 {
   "name": "touch-of-heroes",
   "private": true,
-  "version": "3.0.0",
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && genversion ./Components/Header",
     "preview": "vite preview",
-    "serve": "npm run build && preview"
+    "start": "node index.js && vite build"
   },
   "dependencies": {
     "@emotion/react": "^11.10.0",
