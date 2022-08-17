@@ -31,7 +31,7 @@ function Menu({ title }) {
       </Typography>
       
       <MenuList dense>
-        <Link to="heroes" style={linkStyle}>
+        <Link to="/heroes" style={linkStyle}>
         <MenuItem disableRipple sx={menuItemStyling}>
           <StyledListItemText inset>
             <Typography>Heroes</Typography>
@@ -39,7 +39,7 @@ function Menu({ title }) {
         </MenuItem>
         </Link>
 
-        <Link to="villains" style={linkStyle}>
+        <Link to="/villains" style={linkStyle}>
         <MenuItem disableRipple sx={menuItemStyling}>
           <StyledListItemText inset>
             <Typography>Villains</Typography>
@@ -47,7 +47,7 @@ function Menu({ title }) {
         </MenuItem>
         </Link>
 
-        <Link to="about" style={linkStyle}>
+        <Link to="/about" style={linkStyle}>
         <MenuItem disableRipple sx={menuItemStyling}>
           <StyledListItemText inset>
             <Typography>About</Typography>
