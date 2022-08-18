@@ -8,13 +8,13 @@ import { AddEntry } from "./Components/AddEntry";
 import { EditEntry } from "./Components/EditEntry";
 import { NotFound } from "./Components/NotFound";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { GlobalProvider } from "./context/GlobalState";
+import GlobalContextProvider from "./context/GlobalState";
 
 export default function App() {
   return (
     <div>
       <Header />
-      <GlobalProvider>
+      <GlobalContextProvider>
         <BrowserRouter>
           <Routes>
             <Route path="/heroes" element={ <Heroes />} />
@@ -26,7 +26,7 @@ export default function App() {
             <Route path="*" element={<NotFound />} /> 
             </Routes>
         </BrowserRouter>
-      </GlobalProvider>
+      </GlobalContextProvider>
     </div>
   );
 }

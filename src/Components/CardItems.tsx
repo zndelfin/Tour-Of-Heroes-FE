@@ -6,6 +6,8 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { Link } from "react-router-dom";
 import { Box } from "@mui/system";
 import EditLogo from "../assets/pen-to-square-solid.svg";
+import { useContext } from 'react';
+import { GlobalContext } from "../context/GlobalState";
 
 const buttonCustomStyle = {
   width: "50%",
@@ -15,7 +17,7 @@ const buttonCustomStyle = {
 };
 
 function CardItems({ id , name, description, onClick } : any) {
-  return (
+   return (
     <Box>
       <Card
         sx={{mt: "15px", mb: "20px", mr: "20px"}}>

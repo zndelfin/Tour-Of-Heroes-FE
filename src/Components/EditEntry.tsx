@@ -59,6 +59,8 @@ const EditEntry = () => {
     return <Typography m={4} variant="body1">Invalid Character ID</Typography>
   }
 
+
+
   return (
     <Box
       m={5}

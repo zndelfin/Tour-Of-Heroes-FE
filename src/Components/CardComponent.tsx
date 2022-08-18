@@ -4,7 +4,7 @@ import { CardItems } from "./CardItems";
 import { Typography } from '@mui/material';
 
 const CardComponent = () => {
-  const { characters, removeCharacter } = useContext(GlobalContext);
+  const { characters, deleteCharacter } = useContext(GlobalContext);
 
   return (
     <>
@@ -16,7 +16,7 @@ const CardComponent = () => {
               id={heroes.id}
               name={heroes.name}
               description={heroes.description}
-              onClick={() => removeCharacter(heroes.id)}
+              onClick={() => deleteCharacter(heroes.id)}
             />
           ))}
         </>

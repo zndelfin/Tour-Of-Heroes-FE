@@ -29,24 +29,24 @@ const buttonCustomStyle = {
 
 const AddEntry = () => {
   const navigate = useNavigate();  
-  const { addCharacter, characters } = useContext(GlobalContext);
+  const { addCharacter } = useContext(GlobalContext);
 
-  const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
+  const [newCharacter, setNewCharacter] = useState({
+    name:"",
+    description:""
+  });
 
+  const onChange = (e) => {
+    setNewCharacter({...newCharacter, [e.target.name]: e.target.value})
+  }
+
+  const {name, description} = newCharacter;
 
   const onSubmit = (e) => {
     e.preventDefault();
-    const newCharacter = {
-      id: uuid(),
-      name,
-      description,
-    };
-
-    addCharacter(newCharacter);
+    addCharacter(name, description);
     navigate("/");
   };
-
 
   return (
     <Box
@@ -68,7 +68,7 @@ const AddEntry = () => {
               type="text"
               required
               value={name}
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => onChange(e)}
               name="name"
             />
 
@@ -77,7 +77,7 @@ const AddEntry = () => {
               type="text"
               required
               value={description}
-              onChange={(e) => setDescription(e.target.value)}
+              onChange={(e) => onChange(e)}
               name="description"
             />
           </StyledCardContent>

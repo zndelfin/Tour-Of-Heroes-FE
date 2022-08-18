@@ -1,71 +1,62 @@
-import { createContext, useReducer } from "react";
-import AppReducer from "./AppReducer";
+import { createContext, useState } from "react";
+import heroes from "../heroes";
+import { v4 as uuid } from "uuid";
+import { idText } from "typescript";
 
-// INITIAL STATE
-const initialState = {
-  characters: [
-    {
-      id: 1,
-      name: "Aslaug",
-      description: "warrior queen",
-    },
-    {
-      id: 2,
-      name: "Ivar the Boneless",
-      description: "commander of the Great Heathen Army",
-    },
-    {
-      id: 3,
-      name: "Lagertha the Sheildmaiden",
-      description: "This is a description",
-    },
-    {
-      id: 4,
-      name: "Ragnar Lothbrok",
-      description: "aka Ragnard Sigurdsson",
-    },
-  ],
-};
+export const GlobalContext = createContext();
 
-// CREATE CONTEXT
-export const GlobalContext = createContext(initialState);
+const GlobalContextProvider = (props) => {
 
-//PROVIDER COMPONENT
-export const GlobalProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(AppReducer, initialState);
+const [characters, setCharacters] = useState([
+{
+    id: 1,
+    name: "Aslaug",
+    description: "This is a description"
+},
 
-  // ACTIONS
-  function addCharacter(character: any) {
-    dispatch({
-      type: "ADD_CHARACTER",
-      payload: character
-    });
-  }
+{
+    id: 2,
+    name: "Ivar the Boneless",
+    description: "commander of the Great Heathen Army"
+},
 
-  function editCharacter(character: any) {
-    dispatch({
-      type: "EDIT_CHARACTER",
-      payload: character
-    });
-  }
 
-  function removeCharacter(id: Number) {
-    dispatch({
-      type: "REMOVE_CHARACTER",
-      payload: id
-    });
-  }
+{
+    id: 3,
+    name: "Lagertha the Sheildmaiden",
+    description: "This is a description"
+},
+
+
+{
+    id: 4,
+    name: "Ragnar Lothbrok",
+    description: "aka Ragnard Sigurdsson"
+}
+]);
+
+const addCharacter = (name, description) => {
+  setCharacters([...characters, {id:uuid(), name, description}])
+}
+
+const deleteCharacter = (id) => {
+  setCharacters(characters.filter(character => id !== character.id))
+}
+
+const editCharacter = (id, updatedCharacter) => {
+  setCharacters(characters.map((character) => character.id === id ? updatedCharacter : character))
+}
 
   return (
-    <GlobalContext.Provider
-      value={{
-        characters: state.characters,
-        addCharacter,
-        editCharacter,
-        removeCharacter
-      }}
-    >
-      {children}
+    <GlobalContext.Provider value = {{
+      characters, 
+      addCharacter, 
+      deleteCharacter, 
+      editCharacter
+      }}>
+        {props.children}
     </GlobalContext.Provider>
   );
 };
+
+export default GlobalContextProvider
