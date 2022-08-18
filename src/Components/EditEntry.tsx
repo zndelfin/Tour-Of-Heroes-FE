@@ -28,7 +28,7 @@ const buttonCustomStyle = {
 
 
 const EditEntry = () => {
-  const { characters, editCharacter } = useContext(GlobalContext);
+  const { characters, editCharacter } : any = useContext(GlobalContext);
   const [selectedCharacter, setSelectedCharacter] = useState({
     id: "",
     name: "",

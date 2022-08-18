@@ -4,13 +4,13 @@ import { CardItems } from "./CardItems";
 import { Typography } from '@mui/material';
 
 const CardComponent = () => {
-const { characters, deleteCharacter } = useContext(GlobalContext);
+const { characters, deleteCharacter } : any = useContext(GlobalContext);
 
   return (
     <>
       {characters.length > 0 ? (
         <>
-          {characters.map((heroes) => (
+          {characters.map((heroes : any) => (
             <CardItems
               key={heroes.id}
               id={heroes.id}
