@@ -42,12 +42,9 @@ const EditEntry = () => {
     useEffect(() => {
     const charId = currentCharId.id;
 
-    console.log("type of the charId is : " + typeof currentCharId);
-
     const selectedCharacter = characters.find(char => char.id == charId)
    setSelectedCharacter(selectedCharacter);
 
-    console.log("selectedCharacter is: " + selectedCharacter);
 
     }, [currentCharId, characters] );
   
