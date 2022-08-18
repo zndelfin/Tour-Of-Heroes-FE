@@ -1,4 +1,3 @@
-import React from "react";
 import AddIcon from "@mui/icons-material/Add";
 import AutorenewIcon from "@mui/icons-material/Autorenew";
 import { Box } from "@mui/system";
@@ -6,20 +5,10 @@ import Typography from "@mui/material/Typography";
 import { IconButton } from "@mui/material";
 import { Link } from "react-router-dom";
 
-
-export default function Title() {
+function Title() {
   return (
-      <Box sx={{ display: "flex",  alignItems:"center" }}>
-        <Typography
-          variant="h5"
-          color="black"
-          sx={{
-            paddingLeft: "10px",
-            paddingRight: "10px",
-            borderLeft: "15px solid #22a5e2",
-            borderBottom: "3px solid #22a5e2",
-          }}
-        >
+      <Box sx={{ display: "flex", alignItems:"center"}}>
+        <Typography variant="h5" color="black" sx={{pl:"10px", pr:"10px", borderLeft:"15px solid #22a5e2", borderBottom:"3px solid #22a5e2"}}>
           HEROES
         </Typography>
 
@@ -37,3 +26,6 @@ export default function Title() {
       </Box>
   );
 }
+
+
+export { Title };

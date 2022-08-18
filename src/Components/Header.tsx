@@ -1,9 +1,12 @@
-import React from "react";
 import reactLogo from "../assets/react.svg";
+import {version} from "../version"
 
-export default function Header() {
+function Header() {
   return (
     <div className="nav">
+      <div className="tooltip"> .
+        <span className="tooltiptext">{version}</span>
+      </div>
       <img className="logo" src={reactLogo} alt="React logo" />
       <div className="headerTitle">
         <h3 className="whiteTitle">TOUR</h3>
@@ -13,3 +16,5 @@ export default function Header() {
     </div>
   );
 }
+
+export { Header };

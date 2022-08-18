@@ -1,22 +1,22 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { GlobalContext } from "../context/GlobalState";
-import CardItems from "./CardItems";
+import { CardItems } from "./CardItems";
 import { Typography } from '@mui/material';
 
-export const CardComponent = () => {
-  const { characters, removeCharacter } = useContext(GlobalContext);
+const CardComponent = () => {
+const { characters, deleteCharacter } : any = useContext(GlobalContext);
 
   return (
     <>
       {characters.length > 0 ? (
         <>
-          {characters.map((heroes) => (
+          {characters.map((heroes : any) => (
             <CardItems
               key={heroes.id}
               id={heroes.id}
               name={heroes.name}
               description={heroes.description}
-              onClick={() => removeCharacter(heroes.id)}
+              onClick={() => deleteCharacter(heroes.id)}
             />
           ))}
         </>
@@ -27,4 +27,4 @@ export const CardComponent = () => {
   );
 };
 
-export default CardComponent;
+export {CardComponent};
