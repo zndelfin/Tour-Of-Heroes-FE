@@ -1,5 +1,5 @@
 import reactLogo from "../assets/react.svg";
-import {version} from "../../version";
+import {version} from "../version"
 
 function Header() {
   return (

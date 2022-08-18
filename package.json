@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "prebuild": "genversion"
+    "prebuild": "genversion --es6 --semi src/version.ts"
   },
   "dependencies": {
     "@emotion/react": "^11.10.0",

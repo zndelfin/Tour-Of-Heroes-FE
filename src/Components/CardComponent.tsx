@@ -4,7 +4,7 @@ import { CardItems } from "./CardItems";
 import { Typography } from '@mui/material';
 
 const CardComponent = () => {
-  const { characters, deleteCharacter } = useContext(GlobalContext);
+const { characters, deleteCharacter } = useContext(GlobalContext);
 
   return (
     <>

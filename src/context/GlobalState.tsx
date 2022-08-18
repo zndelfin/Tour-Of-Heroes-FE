@@ -44,8 +44,10 @@ const deleteCharacter = (id) => {
 }
 
 const editCharacter = (id, updatedCharacter) => {
-  setCharacters(characters.map((character) => character.id === id ? updatedCharacter : character))
+  setCharacters(characters.map((character) => 
+character.id == id ? updatedCharacter : character))
 }
+
 
   return (
     <GlobalContext.Provider value = {{
@@ -59,4 +61,4 @@ const editCharacter = (id, updatedCharacter) => {
   );
 };
 
-export default GlobalContextProvider
+export default GlobalContextProvider;
