@@ -18,6 +18,7 @@ const StyledCard = styled(Card)`
 
 const StyledCardContent = styled(CardContent)`
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
 `;
 
@@ -70,6 +71,7 @@ const AddEntry = () => {
               value={name}
               onChange={(e) => onChange(e)}
               name="name"
+              sx={{mb:"20px"}}
             />
 
             <TextField

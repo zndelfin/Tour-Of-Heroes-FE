@@ -17,6 +17,7 @@ const StyledCard = styled(Card)`
 
 const StyledCardContent = styled(CardContent)`
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
 `;
 
@@ -84,6 +85,7 @@ const EditEntry = () => {
               onChange={(e) => handleOnChange("name", e.target.value)}
               value={selectedCharacter.name}
               required
+              sx={{mb:"20px"}}
             />
 
             <TextField
