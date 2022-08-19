@@ -19,12 +19,13 @@ const menuItemStyling = {
   borderRadius: "2px",
   "&:hover": { backgroundColor: "#22a5e2", color: "#FFFFFF" },
   "&.Mui-selected": {
-    backgroundColor: "#22a5e2", color: "#FFFFFF"
-  }
-}
+    backgroundColor: "#22a5e2",
+    color: "#FFFFFF",
+    "&: hover": { backgroundColor: "#22a5e2"}
+  },
+};
 
-
-function Menu({ title} : any) {
+function Menu({ title }: any) {
   let location = useLocation();
   let path = location.pathname;
 
@@ -33,38 +34,38 @@ function Menu({ title} : any) {
       <Typography color="text.secondary" pl={2}>
         {title}
       </Typography>
-      
+
       <MenuList dense>
-        <MenuItem 
-        component={Link} 
-        to="/heroes" 
-        selected={path === '/heroes'}
-        disableRipple 
-        sx={menuItemStyling} >
+        <MenuItem
+          component={Link}
+          to="/heroes"
+          selected={path === "/heroes" || path === "/"}
+          disableRipple
+          sx={menuItemStyling}
+        >
           <StyledListItemText inset>
             <Typography>Heroes</Typography>
           </StyledListItemText>
         </MenuItem>
 
-
-        <MenuItem 
-        component={Link} 
-        to="/villains"  
-        disableRipple 
-        sx={menuItemStyling}
-        selected={path === "/villains"}
+        <MenuItem
+          component={Link}
+          to="/villains"
+          disableRipple
+          sx={menuItemStyling}
+          selected={path === "/villains"}
         >
           <StyledListItemText inset>
             <Typography>Villains</Typography>
           </StyledListItemText>
         </MenuItem>
 
-        <MenuItem 
-        component={Link} 
-        to="/about"  
-        disableRipple 
-        selected={path === '/about'}
-        sx={menuItemStyling}
+        <MenuItem
+          component={Link}
+          to="/about"
+          disableRipple
+          selected={path === "/about"}
+          sx={menuItemStyling}
         >
           <StyledListItemText inset>
             <Typography>About</Typography>
@@ -74,6 +75,5 @@ function Menu({ title} : any) {
     </Box>
   );
 }
-
 
 export { Menu };
