@@ -3,13 +3,24 @@ import AutorenewIcon from "@mui/icons-material/Autorenew";
 import { Box } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import { IconButton } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
-function Title() {
+function Title({titleSelected} : any) {
+  let location = useLocation();
+  let path = location.pathname;
+  
   return (
       <Box sx={{ display: "flex", alignItems:"center"}}>
-        <Typography variant="h5" color="black" sx={{pl:"10px", pr:"10px", borderLeft:"15px solid #22a5e2", borderBottom:"3px solid #22a5e2"}}>
-          HEROES
+        <Typography variant="h5" color="black" 
+        sx={{
+          pl:"10px", 
+          pr:"10px", 
+          borderLeft:"15px solid #22a5e2", 
+          borderBottom:"3px solid #22a5e2",
+          textTransform: "uppercase"
+          }}>
+
+          {path==="/" ? titleSelected="Heroes" : titleSelected}
         </Typography>
 
         <Link to="/add-entry">

@@ -5,6 +5,7 @@ import { Box } from "@mui/system";
 import { Link } from "react-router-dom";
 import { Typography } from "@mui/material";
 import styled from "styled-components";
+import { useLocation } from "react-router-dom";
 
 const StyledListItemText = styled(ListItemText)`
   padding-left: 10px;
@@ -16,48 +17,63 @@ const StyledListItemText = styled(ListItemText)`
 const menuItemStyling = {
   color: "#757575",
   borderRadius: "2px",
-  "&:hover": { backgroundColor: "#22a5e2", color: "#FFFFFF" }
-}
-
-const linkStyle = {
-  textDecoration: "none"
+  "&:hover": { backgroundColor: "#22a5e2", color: "#FFFFFF" },
+  "&.Mui-selected": {
+    backgroundColor: "#22a5e2",
+    color: "#FFFFFF",
+    "&: hover": { backgroundColor: "#22a5e2"}
+  },
 };
 
-function Menu({ title } : any) {
+function Menu({ title }: any) {
+  let location = useLocation();
+  let path = location.pathname;
+
   return (
     <Box width="25%">
       <Typography color="text.secondary" pl={2}>
         {title}
       </Typography>
-      
+
       <MenuList dense>
-        <Link to="/heroes" style={linkStyle}>
-        <MenuItem disableRipple sx={menuItemStyling}>
+        <MenuItem
+          component={Link}
+          to="/heroes"
+          selected={path === "/heroes" || path === "/"}
+          disableRipple
+          sx={menuItemStyling}
+        >
           <StyledListItemText inset>
             <Typography>Heroes</Typography>
           </StyledListItemText>
         </MenuItem>
-        </Link>
 
-        <Link to="/villains" style={linkStyle}>
-        <MenuItem disableRipple sx={menuItemStyling}>
+        <MenuItem
+          component={Link}
+          to="/villains"
+          disableRipple
+          sx={menuItemStyling}
+          selected={path === "/villains"}
+        >
           <StyledListItemText inset>
             <Typography>Villains</Typography>
           </StyledListItemText>
         </MenuItem>
-        </Link>
 
-        <Link to="/about" style={linkStyle}>
-        <MenuItem disableRipple sx={menuItemStyling}>
+        <MenuItem
+          component={Link}
+          to="/about"
+          disableRipple
+          selected={path === "/about"}
+          sx={menuItemStyling}
+        >
           <StyledListItemText inset>
             <Typography>About</Typography>
           </StyledListItemText>
         </MenuItem>
-        </Link>
       </MenuList>
     </Box>
   );
 }
-
 
 export { Menu };
