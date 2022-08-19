@@ -16,14 +16,17 @@ const StyledListItemText = styled(ListItemText)`
 const menuItemStyling = {
   color: "#757575",
   borderRadius: "2px",
-  "&:hover": { backgroundColor: "#22a5e2", color: "#FFFFFF" }
+  "&:hover": { backgroundColor: "#22a5e2", color: "#FFFFFF" },
+  "&.Mui-selected": {
+    backgroundColor: "#22a5e2", color: "#FFFFFF"
+  }
 }
 
 const linkStyle = {
   textDecoration: "none"
 };
 
-function Menu({ title } : any) {
+function Menu({ title} : any) {
   return (
     <Box width="25%">
       <Typography color="text.secondary" pl={2}>
@@ -31,29 +34,24 @@ function Menu({ title } : any) {
       </Typography>
       
       <MenuList dense>
-        <Link to="/heroes" style={linkStyle}>
-        <MenuItem disableRipple sx={menuItemStyling}>
+        <MenuItem component={Link} to="/heroes" disableRipple sx={menuItemStyling} >
           <StyledListItemText inset>
             <Typography>Heroes</Typography>
           </StyledListItemText>
         </MenuItem>
-        </Link>
 
-        <Link to="/villains" style={linkStyle}>
-        <MenuItem disableRipple sx={menuItemStyling}>
+
+        <MenuItem component={Link} to="/villains"  disableRipple sx={menuItemStyling}>
           <StyledListItemText inset>
             <Typography>Villains</Typography>
           </StyledListItemText>
         </MenuItem>
-        </Link>
 
-        <Link to="/about" style={linkStyle}>
-        <MenuItem disableRipple sx={menuItemStyling}>
+        <MenuItem component={Link} to="/about"  disableRipple sx={menuItemStyling}>
           <StyledListItemText inset>
             <Typography>About</Typography>
           </StyledListItemText>
         </MenuItem>
-        </Link>
       </MenuList>
     </Box>
   );
