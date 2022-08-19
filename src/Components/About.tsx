@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
 import styled from "styled-components";
 import { Menu } from "./Menu";
 import { Title } from "./Title";
@@ -28,6 +28,7 @@ function About() {
       <StyledRightBoxSpacing>
         <Title titleSelected="About" />
 
+        <Paper sx={{ backgroundColor: "#F9F9F9", mt:"20px"}}>
         <StyledTypography mt={10}>
           We're on a mission to make it easier to know your Heroes and identify
           the Villains.
@@ -41,8 +42,8 @@ function About() {
           Developed as part of the technical training for ISBX. 
         </StyledTypography>
 
-
         <StyledTypography m={5}> © {currentYear}</StyledTypography>
+        </Paper>
       </StyledRightBoxSpacing>
     </StyledBoxSpacing>
 
