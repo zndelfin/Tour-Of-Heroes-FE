@@ -1,7 +1,11 @@
 {
   "name": "touch-of-heroes",
   "private": true,
+<<<<<<< HEAD
   "version": "2.0.4",
+=======
+  "version": "2.0.3",
+>>>>>>> 4dd8ebe3d8f264cac71c7d6de7b032a5ecacc1c7
   "type": "module",
   "scripts": {
     "dev": "vite",
