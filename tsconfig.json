@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "target": ["ESNext", "es2017"],
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
@@ -9,7 +11,7 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
+    "module": ["ESNext", "commonjs"], 
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,

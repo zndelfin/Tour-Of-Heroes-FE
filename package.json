@@ -4,7 +4,7 @@
   "version": "2.0.4",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 3000",
     "build": "vite build",
     "preview": "vite preview",
     "prebuild": "genversion --es6 --semi src/version.ts"
@@ -20,9 +20,9 @@
     "@mui/material": "^5.9.3",
     "@mui/styled-engine-sc": "^5.9.3",
     "@mui/system": "^5.9.3",
-    "@nestjs/common": "^7.6.17",
-    "@nestjs/core": "^7.6.17",
-    "@nestjs/platform-express": "^7.6.17",
+    "@nestjs/common": "^9.0.11",
+    "@nestjs/core": "^9.0.11",
+    "@nestjs/platform-express": "^9.0.11",
     "genversion": "^3.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
