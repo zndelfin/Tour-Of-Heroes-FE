@@ -9,18 +9,18 @@ import { EditEntry } from "./Components/EditEntry";
 import { NotFound } from "./Components/NotFound";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import GlobalContextProvider from "./context/GlobalState";
-// import { NestFactory } from "@nestjs/core";
-// import { AppModule } from "./Components/app.module";
+import { NestFactory } from "@nestjs/core";
+import { AppModule } from "./Components/app.module";
 
 
 export default function App() {
-  // async function bootstrap(){
-  //   const app = await NestFactory.create(AppModule);
+  async function bootstrap(){
+    const app = await NestFactory.create(AppModule);
   
-  //   await app.listen(3000);
-  // }
+    await app.listen(3000);
+  }
   
-  // bootstrap();
+  bootstrap();
   
   return (
     <div>
@@ -41,3 +41,15 @@ export default function App() {
     </div>
   );
 }
+
+// import {NestFactory} from "@nestjs/core";
+// import { AppModule } from "./Components/app.module";
+
+//   async function bootstrap(){
+//     const app = await NestFactory.create(AppModule);
+  
+//     await app.listen(3000);
+//   }
+  
+// bootstrap();
+  
