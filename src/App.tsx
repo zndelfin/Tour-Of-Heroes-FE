@@ -10,17 +10,16 @@ import { NotFound } from "./Components/NotFound";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import GlobalContextProvider from "./context/GlobalState";
 import { NestFactory } from "@nestjs/core";
-import { AppModule } from "./Components/app.module";
-
+import { AppModule } from "./character-list/app.module";
 
 export default function App() {
-  async function bootstrap(){
-    const app = await NestFactory.create(AppModule);
+  // async function bootstrap(){
+  //   const app = await NestFactory.create(AppModule, { abortOnError: false })
   
-    await app.listen(3000);
-  }
+  //   await app.listen(5000);
+  // }
   
-  bootstrap();
+  // bootstrap();
   
   return (
     <div>
@@ -42,14 +41,5 @@ export default function App() {
   );
 }
 
-// import {NestFactory} from "@nestjs/core";
-// import { AppModule } from "./Components/app.module";
 
-//   async function bootstrap(){
-//     const app = await NestFactory.create(AppModule);
-  
-//     await app.listen(3000);
-//   }
-  
-// bootstrap();
   

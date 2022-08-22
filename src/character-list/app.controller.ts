@@ -7,4 +7,9 @@ export class AppController {
     getRootRoute(){
         return "hi there!";
     }
+
+    @Get("/test")
+    getTestPage(){
+        return "hello from test page!";
+    }
 }

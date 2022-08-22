@@ -7,7 +7,8 @@
     "dev": "vite --port 3000",
     "build": "vite build",
     "preview": "vite preview",
-    "prebuild": "genversion --es6 --semi src/version.ts"
+    "prebuild": "genversion --es6 --semi src/version.ts",
+    "start": "nest start"
   },
   "dependencies": {
     "@emotion/react": "^11.10.0",
