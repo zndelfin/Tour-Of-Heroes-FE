@@ -42,19 +42,19 @@ const EditEntry = () => {
     useEffect(() => {
     const charId = currentCharId.id;
 
-    const selectedCharacter = characters.find(char => char.id == charId)
+    // eslint-disable-next-line
+    const selectedCharacter = characters.find((char: { id: string | undefined; }) => char.id == charId)
    setSelectedCharacter(selectedCharacter);
-
 
     }, [currentCharId, characters] );
   
-  const onSubmit = (e) => {
+  const onSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     editCharacter(selectedCharacter.id, selectedCharacter);
     navigate("/");
   };
 
-  const handleOnChange = (charKey, newValue) =>
+  const handleOnChange = (charKey: string, newValue: string) =>
     setSelectedCharacter({ ...selectedCharacter, [charKey]: newValue });
 
   if (!selectedCharacter || !selectedCharacter.id) {

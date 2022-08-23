@@ -1,4 +1,4 @@
-import "./App.css";
+import './App.css';
 import { Header } from "./Components/Header";
 import { MainContent } from "./Components/MainContent";
 import { Heroes } from "./Components/Heroes";
@@ -9,37 +9,27 @@ import { EditEntry } from "./Components/EditEntry";
 import { NotFound } from "./Components/NotFound";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import GlobalContextProvider from "./context/GlobalState";
-import { NestFactory } from "@nestjs/core";
-import { AppModule } from "./character-list/app.module";
 
-export default function App() {
-  // async function bootstrap(){
-  //   const app = await NestFactory.create(AppModule, { abortOnError: false })
-  
-  //   await app.listen(5000);
-  // }
-  
-  // bootstrap();
-  
+
+function App() {
   return (
     <div>
-      <Header />
-      <GlobalContextProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/heroes" element={ <Heroes />} />
-            <Route path="/villains" element={<Villains />}/> 
-            <Route path="/about" element={<About />} /> 
-            <Route path="/add-entry" element={<AddEntry />} />
-            <Route path="/edit-entry/:id" element={<EditEntry />} /> 
-            <Route path="/"element={ <MainContent /> } /> 
-            <Route path="*" element={<NotFound />} /> 
-            </Routes>
-        </BrowserRouter>
-      </GlobalContextProvider>
-    </div>
+    <Header />
+    <GlobalContextProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/heroes" element={ <Heroes />} />
+          <Route path="/villains" element={<Villains />}/> 
+          <Route path="/about" element={<About />} /> 
+          <Route path="/add-entry" element={<AddEntry />} />
+          <Route path="/edit-entry/:id" element={<EditEntry />} /> 
+          <Route path="/"element={ <MainContent /> } /> 
+          <Route path="*" element={<NotFound />} /> 
+          </Routes>
+      </BrowserRouter>
+    </GlobalContextProvider>
+  </div>
   );
 }
 
-
-  
+export default App;
