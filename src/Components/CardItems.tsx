@@ -8,14 +8,6 @@ import { Box } from "@mui/system";
 import EditLogo from "../assets/pen-to-square-solid.svg";
 import styled from "styled-components";
 
-
-const buttonCustomStyle = {
-  width: "50%",
-  textTransform: "none",
-  border: "solid 1px #DCDCDC",
-  color: "black",
-};
-
 const StyledButton = styled(Button)`
   width: 50%;
   text-transform: none;
