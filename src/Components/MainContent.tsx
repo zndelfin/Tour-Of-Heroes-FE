@@ -1,6 +1,7 @@
 import { Menu } from "./Menu";
 import { Title } from "./Title";
 import { CardComponent } from "./CardComponent";
+import { CardComponentNEST } from "./CardComponentNEST";
 import { Box } from "@mui/system";
 import styled from "styled-components";
 
@@ -25,7 +26,7 @@ function MainContent() {
           <Title />
         </Box>
 
-        <CardComponent />
+        <CardComponentNEST />
       </StyledRightBoxSpacing>
     </StyledBoxSpacing>
   );

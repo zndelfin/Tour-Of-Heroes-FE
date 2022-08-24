@@ -27,8 +27,7 @@ function CardItems({ id, name, description, onClick }: any) {
           </Typography>
         </CardContent>
         <Box sx={{ color: "black" }}>
-
-          <StyledButton onClick={onClick} sx={{border: "solid 1px #DCDCDC"}}>
+          <StyledButton onClick={onClick} sx={{ border: "solid 1px #DCDCDC" }}>
             <DeleteIcon
               sx={{ fontSize: "medium", color: "#757575", mr: "5px" }}
             />
@@ -36,7 +35,7 @@ function CardItems({ id, name, description, onClick }: any) {
           </StyledButton>
 
           <Link to={`/edit-entry/${id}`} style={{ textDecoration: "none" }}>
-            <StyledButton sx={{border: "solid 1px #DCDCDC"}}>
+            <StyledButton sx={{ border: "solid 1px #DCDCDC" }}>
               <img
                 className="editLogo"
                 src={EditLogo}
