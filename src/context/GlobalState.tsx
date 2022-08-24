@@ -10,7 +10,7 @@ const [characters, setCharacters] : any = useState([
 {
     id: 1,
     name: "Aslaug",
-    description: "This is a description"
+    description: "warrior queen"
 },
 
 {
@@ -23,7 +23,7 @@ const [characters, setCharacters] : any = useState([
 {
     id: 3,
     name: "Lagertha the Sheildmaiden",
-    description: "aka Hlaogeror"
+    description: "aka Hlaógerór"
 },
 
 
