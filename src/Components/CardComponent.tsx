@@ -1,13 +1,13 @@
 import { useContext } from 'react';
 import { GlobalContext } from "../context/GlobalState";
 import { CardItems } from "./CardItems";
-import { Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 const CardComponent = () => {
 const { characters, deleteCharacter } : any = useContext(GlobalContext);
 
   return (
-    <>
+    <Box mb={10}>
       {characters.length > 0 ? (
         <>
           {characters.map((heroes : any) => (
@@ -23,8 +23,8 @@ const { characters, deleteCharacter } : any = useContext(GlobalContext);
       ) : (
         <Typography variant="body1"> No data at the moment. </Typography>
       )}
-    </>
+    </Box>
   );
 };
 
-export {CardComponent};
+export { CardComponent };
