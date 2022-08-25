@@ -10,7 +10,7 @@ const { characters, deleteCharacter } : any = useContext(GlobalContext);
     <>
       {characters.length > 0 ? (
         <>
-          {characters.map((heroes : any) => (
+          {characters.filter((_ : any): any => _).map((heroes : any) => (
             <CardItems
               key={heroes.id}
               id={heroes.id}
@@ -27,4 +27,4 @@ const { characters, deleteCharacter } : any = useContext(GlobalContext);
   );
 };
 
-export {CardComponent};
+export { CardComponent };
