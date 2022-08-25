@@ -25,6 +25,8 @@ useEffect(() => {
 
 const addCharacter = (name: any, description: any) => {
 
+  setCharacters([...characters, {id:uuid(), name, description}]) 
+
   fetch(apiURL, {
     method: "POST",
     body: JSON.stringify({
@@ -38,17 +40,16 @@ const addCharacter = (name: any, description: any) => {
   .then(response => response.json())
   .then(json => console.log(json))
 
-  setCharacters([...characters, {id:uuid(), name, description}]) 
 }
 
 const deleteCharacter = (id: number) => {
+  setCharacters(characters.filter((character: { id: number; }) => id !== character.id))
 
   fetch(`http://localhost:3000/characters/${id}`, 
   {
     method: "DELETE"
   })
-
-  setCharacters(characters.filter((character: { id: number; }) => id !== character.id))
+  
 }
 
 const editCharacter = (id: number, updatedCharacter: any) => {
