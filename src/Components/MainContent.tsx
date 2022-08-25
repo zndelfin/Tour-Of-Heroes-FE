@@ -25,7 +25,7 @@ function MainContent() {
           <Title />
         </Box>
 
-        <CardComponent />
+        <CardComponent/>
       </StyledRightBoxSpacing>
     </StyledBoxSpacing>
   );
