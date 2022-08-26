@@ -22,6 +22,7 @@ const GlobalContextProvider = (props: any) => {
   const addCharacter = (name: string, description: string) => {
     setCharacters([...characters, { id: uuid(), name, description }]);
     fetchPost(name, description);
+    pullData();
   };
 
   async function fetchPost(name: string, description: string) {
@@ -60,13 +61,12 @@ const GlobalContextProvider = (props: any) => {
   }
 }
 
-  const editCharacter = (id: number, updatedCharacter: any) => {
+  const editCharacter = (id: string, updatedCharacter: any) => {
     setCharacters(
-      characters.map((character: { id: number }) =>
+      characters.map((character: { id: string }) =>
         character.id === id ? updatedCharacter : character
       )
     );
-
     fetchPatch(
       updatedCharacter.id,
       updatedCharacter.name,
