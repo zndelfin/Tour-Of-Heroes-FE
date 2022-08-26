@@ -43,14 +43,22 @@ const GlobalContextProvider = (props: any) => {
     return responseData;
   }
 
-  const deleteCharacter = (id: number) => {
+  const deleteCharacter = (id: string) => {
     setCharacters(
-      characters.filter((character: { id: number }) => id !== character.id)
+      characters.filter((character: { id: string }) => id !== character.id)
     );
-    fetch(`http://localhost:3000/characters/${id}`, {
-      method: "DELETE",
-    });
-  };
+    fetchDelete(id);
+  }
+
+  async function fetchDelete(id: string){
+  const response = await fetch(`http://localhost:3000/characters/${id}`, {
+    method: "DELETE",
+  })
+  if (!response.ok) {
+    const message = `Failed request: " ${response.status}`;
+    throw new Error(message);
+  }
+}
 
   const editCharacter = (id: number, updatedCharacter: any) => {
     setCharacters(
