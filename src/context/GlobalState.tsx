@@ -1,13 +1,12 @@
 import { createContext, useState } from "react";
-import heroes from "../heroes";
 import { v4 as uuid } from "uuid";
-import { idText } from "typescript";
 
-export const GlobalContext = createContext();
 
-const GlobalContextProvider = (props) => {
+export const GlobalContext = createContext({});
 
-const [characters, setCharacters] = useState([
+const GlobalContextProvider = (props : any) => {
+
+const [characters, setCharacters] : any = useState([
 {
     id: 1,
     name: "Aslaug",
@@ -24,7 +23,7 @@ const [characters, setCharacters] = useState([
 {
     id: 3,
     name: "Lagertha the Sheildmaiden",
-    description: "This is a description"
+    description: "aka Hlaogeror"
 },
 
 
@@ -35,17 +34,17 @@ const [characters, setCharacters] = useState([
 }
 ]);
 
-const addCharacter = (name, description) => {
-  setCharacters([...characters, {id:uuid(), name, description}])
+const addCharacter = (name: any, description: any) => {
+  setCharacters([...characters, {id:uuid(), name, description}]) 
 }
 
-const deleteCharacter = (id) => {
-  setCharacters(characters.filter(character => id !== character.id))
+const deleteCharacter = (id: number) => {
+  setCharacters(characters.filter((character: { id: number; }) => id !== character.id))
 }
 
-const editCharacter = (id, updatedCharacter) => {
-  setCharacters(characters.map((character) => 
-character.id == id ? updatedCharacter : character))
+const editCharacter = (id: number, updatedCharacter: any) => {
+  setCharacters(characters.map((character: { id: number; }) => 
+character.id === id ? updatedCharacter : character))
 }
 
 

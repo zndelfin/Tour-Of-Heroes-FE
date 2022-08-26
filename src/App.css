@@ -1,72 +1,80 @@
 
 body{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .nav{
-    background-color:#292929;
-    display: flex;
+  background-color:#292929;
+  display: flex;
 }
 
 .nav img{
-    margin-left: 10px;
+  margin-left: 10px;
+}
+
+.headerBox{
+  text-decoration: none;
 }
 
 .headerTitle{
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    margin-left: 30px;;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  margin-left: 30px;
 }
 
+
 .whiteTitle{
-    color: white;
+  color: white;
 }
 
 .grayTitle{
-    color:#868686;
+  color:#868686;
 }
 .blueTitle{
-    color: #5BD3FB;
+  color: #5BD3FB;
 }
 
 /* MENU */
 .menuList{
-    width: 30%;
+  width: 30%;
 }  
 
 
 .content{
-    display:flex;
+  display:flex;
 }
 
 .subHeader{
-    margin-top: 20px;
-    margin-left: 30%;
-    position:absolute;
+  margin-top: 20px;
+  margin-left: 30%;
+  position:absolute;
 }
 
 .tooltip {
-    position: relative;
-    display: inline-block;
-    color: #292929;
-  }
-  
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-  
-    /* Position the tooltip */
-    position: absolute;
-    z-index: 1;
-  }
-  
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-  }
+  position: relative;
+  display: inline-block;
+  color: #292929;
+}
 
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
 
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+iframe
+{
+    display: none;
+}

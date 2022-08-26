@@ -1,6 +1,5 @@
-import { useState, useContext } from "react";
+import { useState, useContext, ChangeEvent } from "react";
 import { GlobalContext } from "../context/GlobalState";
-import { v4 as uuid } from "uuid";
 import { useNavigate } from "react-router-dom";
 import { Box } from "@mui/system";
 import { TextField, Typography } from "@mui/material";
@@ -30,20 +29,20 @@ const buttonCustomStyle = {
 
 const AddEntry = () => {
   const navigate = useNavigate();  
-  const { addCharacter } = useContext(GlobalContext);
+  const { addCharacter } : any = useContext(GlobalContext);
 
   const [newCharacter, setNewCharacter] = useState({
     name:"",
     description:""
   });
 
-  const onChange = (e) => {
+  const onChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setNewCharacter({...newCharacter, [e.target.name]: e.target.value})
   }
 
   const {name, description} = newCharacter;
 
-  const onSubmit = (e) => {
+  const onSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     addCharacter(name, description);
     navigate("/");
