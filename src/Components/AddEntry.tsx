@@ -91,4 +91,4 @@ const AddEntry = () => {
   );
 };
 
-export {AddEntry};
+export { AddEntry };
