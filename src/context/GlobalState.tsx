@@ -1,61 +1,110 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import { v4 as uuid } from "uuid";
-
 
 export const GlobalContext = createContext({});
 
-const GlobalContextProvider = (props : any) => {
+const GlobalContextProvider = (props: any) => {
+  const [characters, setCharacters]: any = useState([]);
 
-const [characters, setCharacters] : any = useState([
-{
-    id: 1,
-    name: "Aslaug",
-    description: "This is a description"
-},
+  const apiURL = "http://localhost:3000/characters/";
 
-{
-    id: 2,
-    name: "Ivar the Boneless",
-    description: "commander of the Great Heathen Army"
-},
+  async function pullData() {
+    const response = await fetch(apiURL);
+    const responseData = await response.json();
 
+    setCharacters(responseData);
+  }
 
-{
-    id: 3,
-    name: "Lagertha the Sheildmaiden",
-    description: "aka Hlaogeror"
-},
+  useEffect(() => {
+    pullData();
+  }, []);
 
+  const addCharacter = (name: string, description: string) => {
+    setCharacters([...characters, { id: uuid(), name, description }]);
+    fetchPost(name, description);
+    pullData();
+  };
 
-{
-    id: 4,
-    name: "Ragnar Lothbrok",
-    description: "aka Ragnard Sigurdsson"
+  async function fetchPost(name: string, description: string) {
+    const response = await fetch(apiURL, {
+      method: "POST",
+      body: JSON.stringify({
+        name,
+        description,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    });
+    if (!response.ok) {
+      const message = `Failed request: " ${response.status}`;
+      throw new Error(message);
+    }
+    const responseData = await response.json();
+    pullData();
+    return responseData;
+  }
+
+  const deleteCharacter = (id: string) => {
+    setCharacters(
+      characters.filter((character: { id: string }) => id !== character.id)
+    );
+    fetchDelete(id);
+  }
+
+  async function fetchDelete(id: string){
+  const response = await fetch(`http://localhost:3000/characters/${id}`, {
+    method: "DELETE",
+  })
+  if (!response.ok) {
+    const message = `Failed request: " ${response.status}`;
+    throw new Error(message);
+  }
 }
-]);
 
-const addCharacter = (name: any, description: any) => {
-  setCharacters([...characters, {id:uuid(), name, description}]) 
-}
+  const editCharacter = (id: string, updatedCharacter: any) => {
+    setCharacters(
+      characters.map((character: { id: string }) =>
+        character.id === id ? updatedCharacter : character
+      )
+    );
+    fetchPatch(
+      updatedCharacter.id,
+      updatedCharacter.name,
+      updatedCharacter.description
+    );
+  };
 
-const deleteCharacter = (id: number) => {
-  setCharacters(characters.filter((character: { id: number; }) => id !== character.id))
-}
-
-const editCharacter = (id: number, updatedCharacter: any) => {
-  setCharacters(characters.map((character: { id: number; }) => 
-character.id === id ? updatedCharacter : character))
-}
-
+  async function fetchPatch(id: string, name: string, description: string) {
+    const response = await fetch(`http://localhost:3000/characters/${id}`, {
+      method: "PATCH",
+      body: JSON.stringify({
+        id,
+        name,
+        description,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    });
+    if (!response.ok) {
+      const message = `Failed request: " ${response.status}`;
+      throw new Error(message);
+    }
+    const responseData = await response.json();
+    return responseData;
+  }
 
   return (
-    <GlobalContext.Provider value = {{
-      characters, 
-      addCharacter, 
-      deleteCharacter, 
-      editCharacter
-      }}>
-        {props.children}
+    <GlobalContext.Provider
+      value={{
+        characters,
+        addCharacter,
+        deleteCharacter,
+        editCharacter,
+      }}
+    >
+      {props.children}
     </GlobalContext.Provider>
   );
 };

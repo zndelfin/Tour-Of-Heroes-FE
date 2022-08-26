@@ -43,9 +43,8 @@ const EditEntry = () => {
     const charId = currentCharId.id;
 
     // eslint-disable-next-line
-    const selectedCharacter = characters.find((char: { id: string | undefined; }) => char.id == charId)
+   const selectedCharacter = characters.find((char: { id: string | undefined; }) => char.id == charId)
    setSelectedCharacter(selectedCharacter);
-
     }, [currentCharId, characters] );
   
   const onSubmit = (e: { preventDefault: () => void; }) => {
