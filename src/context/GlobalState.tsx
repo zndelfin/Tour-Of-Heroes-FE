@@ -41,6 +41,7 @@ const GlobalContextProvider = (props: any) => {
       throw new Error(message);
     }
     const responseData = await response.json();
+    pullData();
     return responseData;
   }
 
@@ -78,6 +79,7 @@ const GlobalContextProvider = (props: any) => {
     const response = await fetch(`http://localhost:3000/characters/${id}`, {
       method: "PATCH",
       body: JSON.stringify({
+        id,
         name,
         description,
       }),
