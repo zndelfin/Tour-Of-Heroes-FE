@@ -10,7 +10,7 @@ const { characters, deleteCharacter } : any = useContext(GlobalContext);
     <>
       {characters.length > 0 ? (
         <>
-          {characters.filter((_ : any): any => _).map((heroes : any) => (
+          {characters.map((heroes : any) => (
             <CardItems
               key={heroes.id}
               id={heroes.id}
