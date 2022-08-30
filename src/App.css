@@ -23,6 +23,11 @@ body{
   margin-left: 30px;
 }
 
+.logo {
+  width: 50px;
+  padding: 5px;
+}
+
 
 .whiteTitle{
   color: white;
@@ -72,6 +77,25 @@ body{
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+.footer {
+  background-color: #2A2A2A;
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  bottom:0;
+}
+
+.footerTitle {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.copyright {
+  color: white;
+  margin-left: 10px;
 }
 
 iframe

@@ -16,7 +16,7 @@ const StyledButton = styled(Button)`
 
 function CardItems({ id, name, description, onClick }: any) {
   return (
-    <Box>
+    <Box sx={{flexGrow:"1"}}>
       <Card sx={{ mt: "15px", mb: "20px", mr: "20px" }}>
         <CardContent sx={{ backgroundColor: "#F9F9F9" }}>
           <Typography gutterBottom variant="h5" component="div">
