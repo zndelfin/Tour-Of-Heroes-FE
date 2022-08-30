@@ -1,5 +1,5 @@
 import { Box } from "@mui/system";
-import reactLogo from "../assets/react.svg";
+import batman from "../assets/batman.svg";
 import { version } from "../version";
 
 function Header() {
@@ -11,7 +11,7 @@ function Header() {
 
       <a className="headerBox" href="/">
       <Box sx={{display:"flex", flexDirection:"row"}}>
-      <img className="logo" src={reactLogo} alt="React logo"/>
+      <img className="logo" src={batman} alt="React logo"/>
       <Box className="headerTitle">
         <h3 className="whiteTitle">TOUR</h3>
         <h3 className="grayTitle">OF</h3>

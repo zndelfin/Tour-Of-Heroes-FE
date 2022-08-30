@@ -23,6 +23,11 @@ body{
   margin-left: 30px;
 }
 
+.logo {
+  width: 50px;
+  padding: 5px;
+}
+
 
 .whiteTitle{
   color: white;
