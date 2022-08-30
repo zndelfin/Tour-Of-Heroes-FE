@@ -7,6 +7,7 @@ import { About } from "./Components/About";
 import { AddEntry } from "./Components/AddEntry";
 import { EditEntry } from "./Components/EditEntry";
 import { NotFound } from "./Components/NotFound";
+import { Footer } from "./Components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import GlobalContextProvider from "./context/GlobalState";
 
@@ -28,6 +29,7 @@ function App() {
           </Routes>
       </BrowserRouter>
     </GlobalContextProvider>
+    <Footer />
   </div>
   );
 }
