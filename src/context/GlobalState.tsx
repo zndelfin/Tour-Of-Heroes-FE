@@ -30,11 +30,11 @@ const GlobalContextProvider = (props: any) => {
       method: "POST",
       body: JSON.stringify({
         name,
-        description,
+        description
       }),
       headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
+        "Content-type": "application/json; charset=UTF-8"
+      }
     });
     if (!response.ok) {
       const message = `Failed request: " ${response.status}`;
@@ -50,17 +50,17 @@ const GlobalContextProvider = (props: any) => {
       characters.filter((character: { id: string }) => id !== character.id)
     );
     fetchDelete(id);
-  }
+  };
 
-  async function fetchDelete(id: string){
-  const response = await fetch(`http://localhost:3000/characters/${id}`, {
-    method: "DELETE",
-  })
-  if (!response.ok) {
-    const message = `Failed request: " ${response.status}`;
-    throw new Error(message);
+  async function fetchDelete(id: string) {
+    const response = await fetch(`http://localhost:3000/characters/${id}`, {
+      method: "DELETE"
+    });
+    if (!response.ok) {
+      const message = `Failed request: " ${response.status}`;
+      throw new Error(message);
+    }
   }
-}
 
   const editCharacter = (id: string, updatedCharacter: any) => {
     setCharacters(
@@ -81,11 +81,11 @@ const GlobalContextProvider = (props: any) => {
       body: JSON.stringify({
         id,
         name,
-        description,
+        description
       }),
       headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
+        "Content-type": "application/json; charset=UTF-8"
+      }
     });
     if (!response.ok) {
       const message = `Failed request: " ${response.status}`;
@@ -101,7 +101,7 @@ const GlobalContextProvider = (props: any) => {
         characters,
         addCharacter,
         deleteCharacter,
-        editCharacter,
+        editCharacter
       }}
     >
       {props.children}

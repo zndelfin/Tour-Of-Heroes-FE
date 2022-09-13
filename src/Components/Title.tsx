@@ -5,38 +5,39 @@ import Typography from "@mui/material/Typography";
 import { IconButton } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 
-function Title({titleSelected} : any) {
+function Title({ titleSelected }: any) {
   let location = useLocation();
   let path = location.pathname;
-  
+
   return (
-      <Box sx={{ display: "flex", alignItems:"center"}}>
-        <Typography variant="h5" color="black" 
+    <Box sx={{ display: "flex", alignItems: "center" }}>
+      <Typography
+        variant="h5"
+        color="black"
         sx={{
-          pl:"10px", 
-          pr:"10px", 
-          borderLeft:"15px solid #22a5e2", 
-          borderBottom:"3px solid #22a5e2",
+          pl: "10px",
+          pr: "10px",
+          borderLeft: "15px solid #22a5e2",
+          borderBottom: "3px solid #22a5e2",
           textTransform: "uppercase"
-          }}>
+        }}
+      >
+        {path === "/" ? (titleSelected = "Heroes") : titleSelected}
+      </Typography>
 
-          {path==="/" ? titleSelected="Heroes" : titleSelected}
-        </Typography>
+      <Link to="/add-entry">
+        <IconButton>
+          <AddIcon fontSize="small" />
+        </IconButton>
+      </Link>
 
-        <Link to="/add-entry">
-          <IconButton>
-            <AddIcon fontSize="small" />
-          </IconButton>
-        </Link>
-
-        <Link to="/">
-          <IconButton>
-            <AutorenewIcon fontSize="small" />
-          </IconButton>
-        </Link>
-      </Box>
+      <Link to="/">
+        <IconButton>
+          <AutorenewIcon fontSize="small" />
+        </IconButton>
+      </Link>
+    </Box>
   );
 }
-
 
 export { Title };
