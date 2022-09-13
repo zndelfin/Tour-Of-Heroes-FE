@@ -101,7 +101,8 @@ const GlobalContextProvider = (props: any) => {
         characters,
         addCharacter,
         deleteCharacter,
-        editCharacter
+        editCharacter,
+        pullData
       }}
     >
       {props.children}

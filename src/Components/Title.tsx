@@ -4,8 +4,12 @@ import { Box } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import { IconButton } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
+import { useContext } from "react";
+import { GlobalContext } from "../context/GlobalState";
 
 function Title({ titleSelected }: any) {
+  const { pullData }: any = useContext(GlobalContext);
+
   let location = useLocation();
   let path = location.pathname;
 
@@ -33,7 +37,7 @@ function Title({ titleSelected }: any) {
 
       <Link to="/">
         <IconButton>
-          <AutorenewIcon fontSize="small" />
+          <AutorenewIcon fontSize="small" onClick={pullData()} />
         </IconButton>
       </Link>
     </Box>
