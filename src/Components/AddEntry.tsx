@@ -8,7 +8,7 @@ import Button from "@mui/material/Button";
 import styled from "styled-components";
 
 const StyledCard = styled(Card)`
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   margin-top: 20px;
   margin-bottom: 20px;
   border: 2px solid black;
@@ -24,25 +24,25 @@ const StyledCardContent = styled(CardContent)`
 const buttonCustomStyle = {
   width: "100%",
   border: "solid 1px #DCDCDC",
-  color: "black",
-}
+  color: "black"
+};
 
 const AddEntry = () => {
-  const navigate = useNavigate();  
-  const { addCharacter } : any = useContext(GlobalContext);
+  const navigate = useNavigate();
+  const { addCharacter }: any = useContext(GlobalContext);
 
   const [newCharacter, setNewCharacter] = useState({
-    name:"",
-    description:""
+    name: "",
+    description: ""
   });
 
   const onChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setNewCharacter({...newCharacter, [e.target.name]: e.target.value})
-  }
+    setNewCharacter({ ...newCharacter, [e.target.name]: e.target.value });
+  };
 
-  const {name, description} = newCharacter;
+  const { name, description } = newCharacter;
 
-  const onSubmit = (e: { preventDefault: () => void; }) => {
+  const onSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     addCharacter(name, description);
     navigate("/");
@@ -54,7 +54,7 @@ const AddEntry = () => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
+        justifyContent: "center"
       }}
     >
       <Typography variant="h5">Add Character</Typography>
@@ -68,9 +68,9 @@ const AddEntry = () => {
               type="text"
               required
               value={name}
-              onChange={(e) => onChange(e)}
+              onChange={e => onChange(e)}
               name="name"
-              sx={{mb:"20px"}}
+              sx={{ mb: "20px" }}
             />
 
             <TextField
@@ -78,7 +78,7 @@ const AddEntry = () => {
               type="text"
               required
               value={description}
-              onChange={(e) => onChange(e)}
+              onChange={e => onChange(e)}
               name="description"
             />
           </StyledCardContent>

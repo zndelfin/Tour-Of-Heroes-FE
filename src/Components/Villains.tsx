@@ -18,7 +18,7 @@ const StyledRightBoxSpacing = styled(Box)`
 function Villains() {
   return (
     <StyledBoxSpacing mt={2}>
-      <Menu title="MENU"/>
+      <Menu title="MENU" />
 
       <StyledRightBoxSpacing>
         <Box>
@@ -30,6 +30,5 @@ function Villains() {
     </StyledBoxSpacing>
   );
 }
-
 
 export { Villains };
