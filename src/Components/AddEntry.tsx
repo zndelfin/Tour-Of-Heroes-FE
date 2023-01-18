@@ -2,7 +2,12 @@ import { useState, useContext, ChangeEvent } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import { useNavigate } from "react-router-dom";
 import { Box } from "@mui/system";
-import { TextField, Typography } from "@mui/material";
+import {
+  Checkbox,
+  FormControlLabel,
+  TextField,
+  Typography
+} from "@mui/material";
 import { Card, CardContent } from "@mui/material";
 import Button from "@mui/material/Button";
 import styled from "styled-components";
@@ -33,19 +38,21 @@ const AddEntry = () => {
 
   const [newCharacter, setNewCharacter] = useState({
     name: "",
-    description: ""
+    description: "",
+    characterType: ""
   });
 
   const onChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setNewCharacter({ ...newCharacter, [e.target.name]: e.target.value });
   };
 
-  const { name, description } = newCharacter;
+  const { name, description, characterType } = newCharacter;
 
   const onSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    addCharacter(name, description);
+    addCharacter(name, description, characterType);
     navigate("/");
+    console.log(newCharacter);
   };
 
   return (
@@ -82,6 +89,31 @@ const AddEntry = () => {
               name="description"
             />
           </StyledCardContent>
+
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center"
+            }}
+          >
+            <FormControlLabel
+              control={<Checkbox color="default" />}
+              label="Hero"
+              value="hero"
+              name="characterType"
+              onChange={e => onChange(e)}
+            />
+
+            <FormControlLabel
+              control={<Checkbox color="default" />}
+              label="Villain"
+              value="villain"
+              name="characterType"
+              onChange={e => onChange(e)}
+            />
+          </Box>
+
           <Button type="submit" variant="outlined" style={buttonCustomStyle}>
             Add Character
           </Button>

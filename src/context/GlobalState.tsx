@@ -19,9 +19,16 @@ const GlobalContextProvider = (props: any) => {
     pullData();
   }, []);
 
-  const addCharacter = (name: string, description: string) => {
-    setCharacters([...characters, { id: uuid(), name, description }]);
-    fetchPost(name, description);
+  const addCharacter = (
+    name: string,
+    description: string,
+    characterType: string
+  ) => {
+    setCharacters([
+      ...characters,
+      { id: uuid(), name, description, characterType }
+    ]);
+    fetchPost(name, description, characterType);
     pullData();
   };
 

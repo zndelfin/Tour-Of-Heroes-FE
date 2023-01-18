@@ -8,10 +8,10 @@ import { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 
 function Title({ titleSelected }: any) {
-  const { pullData }: any = useContext(GlobalContext);
-
   let location = useLocation();
   let path = location.pathname;
+
+  const { pullData }: any = useContext(GlobalContext);
 
   return (
     <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -36,8 +36,8 @@ function Title({ titleSelected }: any) {
       </Link>
 
       <Link to="/">
-        <IconButton>
-          <AutorenewIcon fontSize="small" onClick={pullData()} />
+        <IconButton onClick={() => pullData()}>
+          <AutorenewIcon fontSize="small" />
         </IconButton>
       </Link>
     </Box>
